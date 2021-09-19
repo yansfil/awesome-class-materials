@@ -1,0 +1,22 @@
+{
+  "name": "bigquery",
+  "version": "1.0.0",
+  "description": "BigQuery Book",
+  "main": "index.js",
+  "author": "Kyle Byeon",
+  "scripts": {
+    "docs:dev": "vuepress dev docs --port 8000",
+    "docs:build": "vuepress build docs"
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "devDependencies": {
+    "@mr-hope/vuepress-plugin-feed": "^1.18.4",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "@vuepress/plugin-last-updated": "^1.8.2",
+    "@xiaopanda/vuepress-plugin-code-copy": "^1.0.3",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-flexsearch-pro": "^1.0.3",
+    "vuepress-plugin-sitemap": "^2.3.1"
+  }
+}
