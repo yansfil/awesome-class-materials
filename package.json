@@ -1,9 +1,9 @@
 {
-  "name": "bigquery",
+  "name": "awesome-dev-class",
   "version": "1.0.0",
-  "description": "BigQuery Book",
+  "description": "초급 개발자의 성장을 위한 핵심 개발 클래스",
   "main": "index.js",
-  "author": "Kyle Byeon",
+  "author": "Grab",
   "scripts": {
     "docs:dev": "vuepress dev docs --port 8000",
     "docs:build": "vuepress build docs"

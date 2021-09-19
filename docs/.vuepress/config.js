@@ -1,16 +1,16 @@
 module.exports = {
-  title: 'BigQuery Guide Book - 빅쿼리 가이드북',
-  description: 'Google Cloud Platform BigQuery 가이드북',
-  base: '/bigquery/',
+  title: '초급 개발자의 성장을 위한 핵심 개발 클래스 강의자료',
+  description: '초급 개발자의 성장을 위한 핵심 개발 클래스 강의자료',
+  base: '/awesome-class-vuepress',
   theme: '@vuepress/theme-default',
   head: [
     ['link', { rel: 'icon', href: 'https://user-images.githubusercontent.com/18207755/125201572-bdb4ea00-e2aa-11eb-9666-281603bea447.png' }],    
   ],
 
   plugins: {
-    '@vuepress/google-analytics': {
-			ga: 'UA-110573232-1',
-		},
+    // '@vuepress/google-analytics': {
+	// 		ga: 'UA-110573232-1',
+	// 	},
     '@vuepress/back-to-top': {},
     '@mr-hope/feed': {},
     '@vuepress/last-updated': {
@@ -33,8 +33,8 @@ module.exports = {
     logo: 'https://user-images.githubusercontent.com/18207755/125201572-bdb4ea00-e2aa-11eb-9666-281603bea447.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: '🔥 온라인 강의(준비 중)', link: 'https://www.inflearn.com/'},
-      { text: '블로그', link: 'https://zzsza.github.io'}
+      // { text: '🔥 온라인 강의(준비 중)', link: 'https://www.inflearn.com/'},
+      // { text: '블로그', link: 'https://zzsza.github.io'}
     ],
 
     sidebar: [
