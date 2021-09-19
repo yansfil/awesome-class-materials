@@ -1,7 +1,7 @@
 module.exports = {
   title: '초급 개발자의 성장을 위한 핵심 개발 클래스 강의자료',
-  description: '초급 개발자의 성장을 위한 핵심 개발 클래스 강의자료',
-  base: '/awesome-class-vuepress',
+  description: '초급 개발자의 성장을 위한 핵심 개발 클래스의 강의자료입니다.',
+  base: '/awesome-class-materials/',
   theme: '@vuepress/theme-default',
   head: [
     ['link', { rel: 'icon', href: 'https://user-images.githubusercontent.com/18207755/125201572-bdb4ea00-e2aa-11eb-9666-281603bea447.png' }],    
@@ -25,7 +25,7 @@ module.exports = {
         searchResultLength: 90, 
     },
     "sitemap": {
-      hostname: "https://zzsza.github.io/bigquery/"
+      hostname: "https://yansfil.github.io/awesome-class-materials/"
     }
 	},
 

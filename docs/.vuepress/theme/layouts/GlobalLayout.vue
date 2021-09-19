@@ -2,7 +2,7 @@
   <div id="global-layout">
     <component :is="$page.path ? 'Layout' : 'NotFound'" />
     <footer class="siteFooter">
-      <p>CC-BY-NC-ND-4.0 Licensed | Copyright © 2021-present <a href="https://github.com/zzsza">Seongyun Byeon</a></p> 
+      <p>CC-BY-NC-ND-4.0 Licensed | Copyright © 2021-present <a href="https://github.com/yansfil">Grab</a></p>
     </footer>
   </div>
 </template>
