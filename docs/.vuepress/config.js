@@ -1,7 +1,7 @@
 module.exports = {
   title: '초급 개발자의 성장을 위한 핵심 개발 클래스 강의자료',
   description: '초급 개발자의 성장을 위한 핵심 개발 클래스의 강의자료입니다.',
-  base: '/awesome-class-materials/',
+    base: '/awesome-class-materials/',
   theme: '@vuepress/theme-default',
   head: [
     ['link', { rel: 'icon', href: 'https://user-images.githubusercontent.com/18207755/125201572-bdb4ea00-e2aa-11eb-9666-281603bea447.png' }],    
@@ -61,6 +61,22 @@ module.exports = {
           '/1.basic-knowledge/배포와 CI_CD.md',
           '/1.basic-knowledge/병렬성과 동시성.md',
           '/1.basic-knowledge/인증과 인가.md',
+        ]
+      },
+      {
+        title: '협업의 필수 Git, 실무 위주로 익혀보기',
+        collapsable: true,
+        children: [
+          '/3.git/Git의 4가지 작업공간.md',
+          '/3.git/브랜치로 협업하기.md',
+          '/3.git/상황별 Git 사용하기 - 1. log&reflog.md',
+          '/3.git/상황별 Git 사용하기 - 2. reset.md',
+          '/3.git/상황별 Git 사용하기 - 3. stash.md',
+          '/3.git/상황별 Git 사용하기 - 4. revert.md',
+          '/3.git/상황별 Git 사용하기 - 5. cherrypick.md',
+          '/3.git/상황별 Git 사용하기 - 6. rebase-interactive.md',
+          '/3.git/상황별 Git 사용하기 - 7. merge.md',
+          '/3.git/전략적으로 git 사용하기 - Gitflow.md',
         ]
       }
     ]
