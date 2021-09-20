@@ -36,6 +36,7 @@ module.exports = {
       // { text: '🔥 온라인 강의(준비 중)', link: 'https://www.inflearn.com/'},
       // { text: '블로그', link: 'https://zzsza.github.io'}
     ],
+    sidebarDepth:2,
 
     sidebar: [
       '/guide',
@@ -55,12 +56,12 @@ module.exports = {
         title: '깔끔한 코드를 위하여! 클린코드',
         collapsable: true,
         children: [
-          '/1.basic-knowledge/OSI 7계층과 TCP_IP 4계층 모델.md',
-          '/1.basic-knowledge/동기와 비동기, 블락과 논블락.md',
-          '/1.basic-knowledge/모놀리스와 마이크로서비스.md',
-          '/1.basic-knowledge/배포와 CI_CD.md',
-          '/1.basic-knowledge/병렬성과 동시성.md',
-          '/1.basic-knowledge/인증과 인가.md',
+            '/2.clean-code/1. 네이밍.md',
+            '/2.clean-code/2. 주석, 포맷팅.md',
+            '/2.clean-code/3. 함수.md',
+            '/2.clean-code/4. 클래스.md',
+            '/2.clean-code/5. 에러핸들링.md',
+            '/2.clean-code/6. 가드클라우징.md',
         ]
       },
       {
@@ -78,7 +79,22 @@ module.exports = {
           '/3.git/상황별 Git 사용하기 - 7. merge.md',
           '/3.git/전략적으로 git 사용하기 - Gitflow.md',
         ]
-      }
+      },
+      {
+        title: '객체 지향 프로그래밍 기본 딱지 떼기',
+        collapsable: true,
+        children: []
+      },
+      {
+        title: '견고한 서비스를 위한 테스트 코드 작성하기',
+        collapsable: true,
+        children: []
+      },
+      {
+        title: '더 나은 설계를 위한 아키텍처 이해하기',
+        collapsable: true,
+        children: []
+      },
     ]
   }
 }
