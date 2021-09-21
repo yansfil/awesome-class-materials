@@ -39,9 +39,10 @@ module.exports = {
     sidebarDepth:2,
 
     sidebar: [
+      "guide.md",
       {
         type: 'group',
-        title: '회사에서 공부하면 좋을 개발 지식들',
+        title: '1. 회사에서 공부하면 좋을 개발 지식들',
         collapsable: true,
         sidebarDepth: 1,    // optional, defaults to 1
         children: [
@@ -63,7 +64,7 @@ module.exports = {
 				]
             },
             {
-                title: '서비스에 유저를 넣는 인증/인가',
+                title: '서비스에 로그인 기능 추가하기',
 				collapsable: false,
 				children: [
 				    '/1.basic-knowledge/로그인과 회원가입의 기본/세션과 쿠키.md',
@@ -75,7 +76,7 @@ module.exports = {
         ]
       },
       {
-        title: '깔끔한 코드를 위하여! 클린코드',
+        title: '2. 깔끔한 코드를 위하여! 클린코드',
         collapsable: true,
         children: [
             '/2.clean-code/1. 네이밍.md',
@@ -87,7 +88,7 @@ module.exports = {
         ]
       },
       {
-        title: '협업의 필수 Git, 실무 위주로 익혀보기',
+        title: '3. 협업의 필수 Git, 실무 위주로 익혀보기',
         collapsable: true,
         children: [
           '/3.git/Git의 4가지 작업공간.md',
@@ -103,7 +104,7 @@ module.exports = {
         ]
       },
       {
-        title: '코드로 알아보는 객체 지향 프로그래밍',
+        title: '4. 코드로 알아보는 객체 지향 프로그래밍',
         collapsable: true,
         children: [
             '/4.object-oriented/프로그래밍 패러다임 변천사.md',
@@ -112,7 +113,7 @@ module.exports = {
         ]
       },
       {
-        title: '객체 지향 설계를 위한 SOLID 원칙',
+        title: '5. 객체 지향 설계를 위한 SOLID 원칙',
         collapsable: true,
         children: [
             '/5.object-oriented-solid/SOLID - Single Reponsibility.md',
@@ -123,7 +124,7 @@ module.exports = {
         ]
       },
       {
-        title: '견고한 서비스를 위한 테스트 코드 작성하기',
+        title: '6. 견고한 서비스를 위한 테스트 코드 작성하기',
         collapsable: true,
         children: [
             '/6.test-code/테스트 기본 이해하기.md',
@@ -133,7 +134,7 @@ module.exports = {
         ]
       },
       {
-        title: '더 나은 설계를 위한 아키텍처 이해하기',
+        title: '7. 더 나은 설계를 위한 아키텍처 이해하기',
         collapsable: true,
         children: []
       },
