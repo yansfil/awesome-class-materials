@@ -8,7 +8,7 @@
 
 이에 대해 알아봅시다.
 
-![enter image description here](images/hUtiB.png)
+![enter image description here](./images/hUtiB.png)
 
 (출처: https://i.stack.imgur.com/hUtiB.png)
 
