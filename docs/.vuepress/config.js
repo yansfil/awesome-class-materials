@@ -81,7 +81,7 @@ module.exports = {
         ]
       },
       {
-        title: '객체 지향 프로그래밍 기본 딱지 떼기',
+        title: '코드로 알아보는 객체 지향 프로그래밍',
         collapsable: true,
         children: [
             '/4.object-oriented/프로그래밍 패러다임 변천사.md',
@@ -90,7 +90,7 @@ module.exports = {
         ]
       },
       {
-        title: '객체 지향 설계 5원칙 SOLID',
+        title: '객체 지향 설계를 위한 SOLID 원칙',
         collapsable: true,
         children: [
             '/5.object-oriented-solid/SOLID - Single Reponsibility.md',
@@ -103,7 +103,10 @@ module.exports = {
       {
         title: '견고한 서비스를 위한 테스트 코드 작성하기',
         collapsable: true,
-        children: []
+        children: [
+            '/6.test-code/테스트 기본 개념 짚고가기.md',
+            '/6.test-code/TDD 기본 개념 파악하기.md',
+        ]
       },
       {
         title: '더 나은 설계를 위한 아키텍처 이해하기',
