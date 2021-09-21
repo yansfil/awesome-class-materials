@@ -39,17 +39,39 @@ module.exports = {
     sidebarDepth:2,
 
     sidebar: [
-      '/guide',
       {
+        type: 'group',
         title: '회사에서 공부하면 좋을 개발 지식들',
         collapsable: true,
+        sidebarDepth: 1,    // optional, defaults to 1
         children: [
+            {
+				title: '효율적으로 프로그램 운영하기',
+				collapsable: false,
+				children: [
+				    '/1.basic-knowledge/효율적으로 프로그램 운영하기/프로세스와 스레드 기본개념.md',
+				    '/1.basic-knowledge/효율적으로 프로그램 운영하기/병렬성과 동시성.md',
+                    '/1.basic-knowledge/효율적으로 프로그램 운영하기/동기와 비동기, 블락과 논블락.md',
+				]
+			},
+            {
+                title: '쉽고 빠르게 프로그램 배포하기',
+				collapsable: false,
+				children: [
+				    '/1.basic-knowledge/쉽고 빠르게 프로그램 배포하기/가상화기술과 도커.md',
+				    '/1.basic-knowledge/쉽고 빠르게 프로그램 배포하기/배포와 CI&CD.md',
+				]
+            },
+            {
+                title: '서비스에 유저를 넣는 인증/인가',
+				collapsable: false,
+				children: [
+				    '/1.basic-knowledge/로그인과 회원가입의 기본/세션과 쿠키.md',
+                    '/1.basic-knowledge/로그인과 회원가입의 기본/인증과 인가.md',
+				]
+            },
           '/1.basic-knowledge/OSI 7계층과 TCP_IP 4계층 모델.md',
-          '/1.basic-knowledge/동기와 비동기, 블락과 논블락.md',
           '/1.basic-knowledge/모놀리스와 마이크로서비스.md',
-          '/1.basic-knowledge/배포와 CI_CD.md',
-          '/1.basic-knowledge/병렬성과 동시성.md',
-          '/1.basic-knowledge/인증과 인가.md',
         ]
       },
       {
