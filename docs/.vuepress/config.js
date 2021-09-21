@@ -126,8 +126,10 @@ module.exports = {
         title: '견고한 서비스를 위한 테스트 코드 작성하기',
         collapsable: true,
         children: [
-            '/6.test-code/테스트 기본 개념 짚고가기.md',
-            '/6.test-code/TDD 기본 개념 파악하기.md',
+            '/6.test-code/테스트 기본 이해하기.md',
+            '/6.test-code/종류별 테스트 작성하기.md',
+            '/6.test-code/의존성을 대체하는 테스트 더블.md',
+            '/6.test-code/TDD 기본 개념 익히기.md',
         ]
       },
       {
