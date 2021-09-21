@@ -83,7 +83,22 @@ module.exports = {
       {
         title: '객체 지향 프로그래밍 기본 딱지 떼기',
         collapsable: true,
-        children: []
+        children: [
+            '/4.object-oriented/프로그래밍 패러다임 변천사.md',
+            '/4.object-oriented/객체 지향 기본적인 개념들 짚고 가기.md',
+            '/4.object-oriented/실습으로 알아보는 객체 지향의 특성.md'
+        ]
+      },
+      {
+        title: '객체 지향 설계 5원칙 SOLID',
+        collapsable: true,
+        children: [
+            '/5.object-oriented-solid/SOLID - Single Reponsibility.md',
+            '/5.object-oriented-solid/SOLID - Open Closed.md',
+            '/5.object-oriented-solid/SOLID - Liskov Substitution.md',
+            '/5.object-oriented-solid/SOLID - Interface Segregation.md',
+            '/5.object-oriented-solid/SOLID - Dependency Inversion.md',
+        ]
       },
       {
         title: '견고한 서비스를 위한 테스트 코드 작성하기',
