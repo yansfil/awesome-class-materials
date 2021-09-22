@@ -47,28 +47,29 @@ module.exports = {
         sidebarDepth: 1,    // optional, defaults to 1
         children: [
             {
-				title: '효율적으로 프로그램 운영하기',
+				title: '1.효율적으로 프로그램 운영하기',
 				collapsable: false,
 				children: [
-				    '/1.basic-knowledge/효율적으로 프로그램 운영하기/프로세스와 스레드 기본개념.md',
-				    '/1.basic-knowledge/효율적으로 프로그램 운영하기/병렬성과 동시성.md',
-                    '/1.basic-knowledge/효율적으로 프로그램 운영하기/동기와 비동기, 블락과 논블락.md',
+				    '/1.basic-knowledge/1.효율적으로 프로그램 운영하기/프로세스와 스레드 기본.md',
+                    '/1.basic-knowledge/1.효율적으로 프로그램 운영하기/병렬성과 동시성.md',
+				    '/1.basic-knowledge/1.효율적으로 프로그램 운영하기/멀티스레드와 멀티프로세스.md',
+                    '/1.basic-knowledge/1.효율적으로 프로그램 운영하기/동기와 비동기, 블락과 논블락.md',
 				]
 			},
             {
-                title: '쉽고 빠르게 프로그램 배포하기',
+                title: '2.쉽고 빠르게 프로그램 배포하기',
 				collapsable: false,
 				children: [
-				    '/1.basic-knowledge/쉽고 빠르게 프로그램 배포하기/가상화기술과 도커.md',
-				    '/1.basic-knowledge/쉽고 빠르게 프로그램 배포하기/배포와 CI&CD.md',
+				    '/1.basic-knowledge/2.쉽고 빠르게 프로그램 배포하기/가상화기술과 도커.md',
+				    '/1.basic-knowledge/2.쉽고 빠르게 프로그램 배포하기/배포와 CI&CD.md',
 				]
             },
             {
                 title: '서비스에 로그인 기능 추가하기',
 				collapsable: false,
 				children: [
-				    '/1.basic-knowledge/로그인과 회원가입의 기본/세션과 쿠키.md',
-                    '/1.basic-knowledge/로그인과 회원가입의 기본/인증과 인가.md',
+				    '/1.basic-knowledge/3.로그인과 회원가입의 기본/세션과 쿠키.md',
+                    '/1.basic-knowledge/3.로그인과 회원가입의 기본/인증과 인가.md',
 				]
             },
           '/1.basic-knowledge/OSI 7계층과 TCP_IP 4계층 모델.md',
