@@ -65,15 +65,20 @@ module.exports = {
 				]
             },
             {
-                title: '서비스에 로그인 기능 추가하기',
+                title: '3. 서비스 구현의 핵심, 회원가입과 로그인 이해하기',
 				collapsable: false,
 				children: [
 				    '/1.basic-knowledge/3.로그인과 회원가입의 기본/세션과 쿠키.md',
-                    '/1.basic-knowledge/3.로그인과 회원가입의 기본/인증과 인가.md',
+                    '/1.basic-knowledge/3.로그인과 회원가입의 기본/사용자 인증.md',
 				]
             },
-          '/1.basic-knowledge/OSI 7계층과 TCP_IP 4계층 모델.md',
-          '/1.basic-knowledge/모놀리스와 마이크로서비스.md',
+            {
+                title: '4. 추가',
+				collapsable: false,
+				children: [
+				    '/1.basic-knowledge/4.추가/OSI 7계층과 TCP_IP 4계층 모델.md',
+				]
+            },
         ]
       },
       {
