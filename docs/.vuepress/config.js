@@ -43,7 +43,7 @@ module.exports = {
       {
         type: 'group',
         title: '1. 회사에서 공부하면 좋을 개발 지식들',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 1,    // optional, defaults to 1
         children: [
             {
@@ -83,7 +83,7 @@ module.exports = {
       },
       {
         title: '2. 깔끔한 코드를 위하여! 클린코드',
-        collapsable: true,
+        collapsable: false,
         children: [
             '/2.clean-code/1. 네이밍.md',
             '/2.clean-code/2. 주석, 포맷팅.md',
@@ -95,15 +95,15 @@ module.exports = {
       },
       {
         title: '3. 협업의 필수 Git, 실무 위주로 익혀보기',
-        collapsable: true,
+        collapsable: false,
         children: [
-          '/3.git/Git의 4가지 작업공간.md',
+          '/3.git/Git 기본 이해하기.md',
           '/3.git/브랜치로 협업하기.md',
           '/3.git/상황별 Git 사용하기 - 1. log&reflog.md',
           '/3.git/상황별 Git 사용하기 - 2. reset.md',
           '/3.git/상황별 Git 사용하기 - 3. stash.md',
-          '/3.git/상황별 Git 사용하기 - 4. revert.md',
-          '/3.git/상황별 Git 사용하기 - 5. cherrypick.md',
+          '/3.git/상황별 Git 사용하기 - 4. cherrypick.md',
+          '/3.git/상황별 Git 사용하기 - 5. revert.md',
           '/3.git/상황별 Git 사용하기 - 6. rebase-interactive.md',
           '/3.git/상황별 Git 사용하기 - 7. merge.md',
           '/3.git/전략적으로 git 사용하기 - Gitflow.md',
@@ -111,7 +111,7 @@ module.exports = {
       },
       {
         title: '4. 코드로 알아보는 객체 지향 프로그래밍',
-        collapsable: true,
+        collapsable: false,
         children: [
             '/4.object-oriented/프로그래밍 패러다임 변천사.md',
             '/4.object-oriented/객체 지향 기본적인 개념들 짚고 가기.md',
@@ -120,7 +120,7 @@ module.exports = {
       },
       {
         title: '5. 객체 지향 설계를 위한 SOLID 원칙',
-        collapsable: true,
+        collapsable: false,
         children: [
             '/5.object-oriented-solid/SOLID - Single Reponsibility.md',
             '/5.object-oriented-solid/SOLID - Open Closed.md',
@@ -131,7 +131,7 @@ module.exports = {
       },
       {
         title: '6. 견고한 서비스를 위한 테스트 코드 작성하기',
-        collapsable: true,
+        collapsable: false,
         children: [
             '/6.test-code/테스트 기본 이해하기.md',
             '/6.test-code/종류별 테스트 작성하기.md',
@@ -141,7 +141,7 @@ module.exports = {
       },
       {
         title: '7. 더 나은 설계를 위한 아키텍처 이해하기',
-        collapsable: true,
+        collapsable: false,
         children: []
       },
     ]

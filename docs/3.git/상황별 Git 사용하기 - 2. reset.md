@@ -83,19 +83,3 @@ $ git status
   (use "git restore --staged <file>..." to unstage)
 	수정함:        a
 ```
-
-> `git reset` 명령어에 `{커밋 ID}` 가 아닌 `HEAD` 를 대신 넣을수도 있어요!
->
-> `HEAD` 는 커밋 내역에서 현재 커밋(보통 가장 최신 커밋)을 가리키는 포인터입니다. 다음처럼 `git log` 명령어로 `HEAD` 포인터가 현재 어느 커밋을 가리키고 있는지 확인할 수 있습니다.
->
-> ```bash
-> $ git log --oneline
-> c7591af (HEAD -> my-branch) a 파일을 수정한다
-> fc25d18 c 파일을 추가한다
-> 0379a06 b 파일을 추가한다
-> b014111 a 파일을 추가한다
-> ```
->
-> 만약 `fc25d18` 커밋 내역으로 `reset` 하고 싶으면 `git log fc25d18` 대신 `git reset HEAD~1` 를 사용하면 됩니다. `0379a06` 커밋 내역으로 돌아가고 싶다면 `git reset HEAD~2` 로 하면 되구요!
-
-<br>
