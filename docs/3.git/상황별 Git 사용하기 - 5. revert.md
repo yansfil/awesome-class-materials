@@ -6,7 +6,7 @@
 다음과 같은 세 개의 커밋이 있는 상황이라고 합시다.
 
 ```bash
-$ git log --one-line
+$ git log --oneline
 
 875a6e6 b 파일을 추가한다
 1fc71a0 a 파일을 업데이트한다
@@ -37,7 +37,7 @@ This reverts commit 1fc71a0e2b3839cdd0ada557df823609f234610a.
 이제 로그를 확인하면 다음처럼 `1fc71a0` 시점 때의 작업물로 되돌아 온것을 확인할 수 있습니다.
 
 ```bash
-$ git log --one-line
+$ git log --oneline
 
 dea542b This reverts commit 1fc71a0e2b3839cdd0ada557df823609f234610a.
 875a6e6 b 파일을 추가한다

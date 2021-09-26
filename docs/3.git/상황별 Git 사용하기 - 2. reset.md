@@ -22,7 +22,7 @@ $ git reset b014111 --hard
 
 HEAD의 현재 위치는 b014111입니다 a 파일을 추가한다
 
-$ git log --one-line
+$ git log --oneline
 
 b014111 a 파일을 추가한다
 
@@ -46,7 +46,7 @@ $ git reset b014111 --mixed
 리셋 뒤에 스테이징하지 않은 변경 사항:
 M	a
 
-$ git log --one-line
+$ git log --oneline
 
 b014111 a 파일을 추가한다
 
@@ -72,7 +72,7 @@ $ git status
 ```bash
 $ git reset b014111 --soft
 
-$ git log --one-line
+$ git log --oneline
 
 b014111 a 파일을 추가한다
 
