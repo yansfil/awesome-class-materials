@@ -23,7 +23,7 @@ Date:   Tue Aug 17 20:34:32 2021 +0900
  다음처럼 `--oneline` 으로 간략하게 볼 수도 있습니다.
 
 ```bash
-$ git log --one-line
+$ git log --oneline
 
 c008c47 (HEAD -> master) a 파일을 업데이트 한다
 b014111 a 파일을 추가한다
