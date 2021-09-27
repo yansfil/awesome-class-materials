@@ -146,7 +146,8 @@ module.exports = {
             '/7.clean-architecture/아키텍처를 시작하기 전에.md',
             '/7.clean-architecture/대표적인 아키텍처들 알아보기 - 레이어드 아키텍처.md',
             '/7.clean-architecture/대표적인 아키텍처들 알아보기 - 포트 앤 어댑터 아키텍처.md',
-            '/7.clean-architecture/클린 아키텍처.md',
+            '/7.clean-architecture/클린 아키텍처 - 기본.md',
+            '/7.clean-architecture/클린 아키텍처 - 구현하기.md',
             '/7.clean-architecture/모놀리스와 마이크로서비스.md',
         ]
       },
