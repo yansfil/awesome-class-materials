@@ -1,7 +1,7 @@
 # SOLID - Interface Segregation
 
 ## 개념
-`Interface Segregation Principle(인터페이스 분리 원칙)`은 클라이언트가 자신이 이용하지 않는 메소드는 의존하지 않아야 한다는 원칙입니다. 
+`Interface Segregation Principle(인터페이스 분리 원칙)`은 클라이언트가 자신이 이용하지 않는 메서드는 의존하지 않아야 한다는 원칙입니다. 
 
 SOLID의 1 원칙인 Single Responsibility Principle은 객체가 하나의 책임만을 가져야 한다고 했는데, 여기서는 인터페이스(혹은 추상 클래스)가 하나의 책임만을 가져야 한다고 보시면 됩니다. 
 
@@ -31,7 +31,7 @@ class Smartphone(metaclass=ABCMeta):
 	def take_picture(self):
 		...
 
-#카메라가 없는 클래스에서 take_picture는 불필요한 메소드가 된다.
+#카메라가 없는 클래스에서 take_picture는 불필요한 메서드가 된다.
 class PhoneWithNoCamera(Smartphone):
 	...
 ```

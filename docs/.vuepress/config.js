@@ -113,9 +113,9 @@ module.exports = {
         title: '4. 코드로 알아보는 객체 지향 프로그래밍',
         collapsable: false,
         children: [
-            '/4.object-oriented/프로그래밍 패러다임 변천사.md',
+            '/4.object-oriented/프로그래밍 패러다임 한번에 이해하기.md',
             '/4.object-oriented/객체 지향 기본적인 개념들 짚고 가기.md',
-            '/4.object-oriented/실습으로 알아보는 객체 지향의 특성.md'
+            '/4.object-oriented/코드로 알아보는 객체 지향의 특성.md'
         ]
       },
       {
