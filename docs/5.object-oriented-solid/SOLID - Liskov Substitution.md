@@ -4,9 +4,9 @@
 
 `Liskov Substitution Principle(리스코브 치환 원칙)`은 부모 객체의 역할은 자식 객체도 할 수 있어야 된다는 원칙입니다.
 
-B 객체가 A객체의 자식이라면 B객체의 타입을 A로 바꾸더라도 작동에 문제가 없어야 합니다. 상위 타입에서 정한 명세를 하위 타입에서도 그대로 지킬 수 있을 때 상속을 해야 합니다
+B 객체가 A 객체의 자식이라면 B객체의 타입을 A로 바꾸더라도 작동에 문제가 없어야 합니다. 상위 타입에서 정한 명세를 하위 타입에서도 그대로 지킬 수 있을 때 상속을 해야 합니다
 
-일반적으로 Liskov Substituion Principle이 지켜지지 않으면 Open Closed Principle을 위반하게 됩니다. 
+일반적으로 Liskov Substitution Principle이 지켜지지 않으면 Open Closed Principle을 위반하게 됩니다. 
 
 ## 위반한 사례1
 
