@@ -77,6 +77,7 @@ module.exports = {
 				collapsable: false,
 				children: [
 				    '/1.basic-knowledge/4.추가/OSI 7계층과 TCP_IP 4계층 모델.md',
+				    '/1.basic-knowledge/4.추가/우리 회사는 어떻게 웹 서비스를 운영할까.md',
 				]
             },
         ]
