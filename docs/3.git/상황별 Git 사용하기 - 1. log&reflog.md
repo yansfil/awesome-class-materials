@@ -99,7 +99,7 @@ $ git reset 0379a06 --hard
 HEAD의 현재 위치는 0379a06입니다 b 파일을 추가한다
 ```
 
-이 때 일반적이라면 `git reset` 하기 전의 작업 내역으로 돌아갈 수 없지만, `git reflog` 에는 이렇게 `git reset` 한 명령 내역까지 모두 남아있습니다.
+이때 일반적이라면 `git reset` 하기 전의 작업 내역으로 돌아갈 수 없지만, `git reflog` 에는 이렇게 `git reset` 한 명령 내역까지 모두 남아있습니다.
 
 ```bash
 $ git reflog
