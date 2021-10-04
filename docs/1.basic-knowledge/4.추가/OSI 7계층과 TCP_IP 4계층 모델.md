@@ -194,7 +194,7 @@ HTTPS는 통신 보안을 포함하고 있으므로, 당연히 HTTP보다 더 �
 
 - [Steven님 블로그 - TCP vs UDP](https://www.stevenjlee.net/2020/06/29/%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-tcp-%EC%99%80-udp-tcp-vs-udp/)
     - TCP와 UDP의 통신 절차, 데이터 모양을 상세히 설명해주는 글입니다.
-    - 통신이 구체적으로 어떻게 동작하는지 가볍게 한번 훑어보시기 좋습니다.
+    - 통신이 구체적으로 어떻게 동작하는지 가볍게 한 번 훑어보시기 좋습니다.
 - [Evan moon님 블로그 글]
     - [패킷의 흐름과 오류를 제어하는 TCP](https://evan-moon.github.io/2019/11/22/tcp-flow-control-error-control/)
     - [사이 좋게 네트워크를 나눠 쓰는 방법, TCP의 혼잡 제어](https://evan-moon.github.io/2019/11/26/tcp-congestion-control/)

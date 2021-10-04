@@ -3,7 +3,7 @@
 이번 글에서는 프로젝트를 진행할 때 Git을 사용하는 전략 패턴 중 하나인 Gitflow 전략을 알아봅시다.
 
 :::tip
-대표적인 브랜치 전략으로 GitFlow 이외에도 `Github-flow`, `Gitlab-flow` 등이 있습니다. 
+대표적인 브랜치 전략으로 GitFlow 이외에도 `GitHub-flow`, `Gitlab-flow` 등이 있습니다. 
 각기 장단점이 있기에 회사 개발 팀에서는 상황에 맞는 브랜치 전략을 정해서 사용하곤 합니다.
 :::
 
@@ -72,7 +72,7 @@ Gitflow는 다음과 같이 5개의 브랜치를 두도록 약속합니다.
 1. master 브랜치에서 develop 브랜치를 만듭니다.
 2. 필요한 기능사항들을 정의하고 개발자들 별로 어떤 기능 개발을 담당할지 정합니다.
 3. 기능사항 별로 각 개발자들은 develop 브랜치에서 feature 브랜치를 만들어 작업합니다.
-    - 실제로는 `feature/create_user` , `feature/payment` 등 한번에 개발할 단위로 브랜치를 만듭니다.
+    - 실제로는 `feature/create_user` , `feature/payment` 등 한 번에 개발할 단위로 브랜치를 만듭니다.
     - 한 사람이 여러 브랜치를 담당할 수 있습니다.
     - 반대로 한 브랜치에 해당 기능 개발에 참여한 여러 사람이 작업할 수도 있습니다.
 4. feature 브랜치에서 작업완료 후 remote repository에서 `push` 하여 팀원들에게 리뷰를 받습니다.
@@ -133,6 +133,6 @@ Gitflow 패턴을 사용하면 다음과 같은 장점이 있습니다.
 - [배달의 민족 블로그 - 우린 Git-flow를 사용하고 있어요](https://techblog.woowahan.com/2553/)
     - 배민에서 gitflow 전략을 어떻게 사용하는지 소개합니다.
 - [ujuc님 블로그 - Git flow, GitHub flow, GitLab flow](https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/)
-    - Gitflow 전략 외에 다른 대표적인 두 전략(Github-flow, Gitlab-flow)에 대해 소개합니다.
+    - Gitflow 전략 외에 다른 대표적인 두 전략(GitHub-flow, Gitlab-flow)에 대해 소개합니다.
 - [kentrick님 블로그 - 다양한 소프트웨어 버전 명명 (Software versioning)](https://blog.sonim1.com/243)
     - 소프트웨어 프로젝트에서 대표적인 버저닝 패턴들을 소개합니다.

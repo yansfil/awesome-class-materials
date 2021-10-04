@@ -67,7 +67,7 @@ Docker로 인해 이전보다 배포하는 속도가 빨라지고 더욱 자주 
 - 업로드한 컨테이너 이미지를 서버에서 다운받아 실행하는 과정
 
 만약 위 과정이 자동화되면 팀원들이 더 빠르고 쉽게 배포를 진행할 수 있게 됩니다. 예를 들면 작업한 코드를 원격 저장소(GitHub)에 올리게 되면, 즉시 위 세 과정이 순차적으로 동작하도록 할 수 있습니다.
-Github에 개발한 코드만 올리면 바로 배포가 되는 것이죠. 이를 지속적 통합/지속적 배포(Continous Integration / Continous Deployment), 일명 `CI/CD`라고 부릅니다.
+GitHub에 개발한 코드만 올리면 바로 배포가 되는 것이죠. 이를 지속적 통합/지속적 배포(Continous Integration / Continous Deployment), 일명 `CI/CD`라고 부릅니다.
 
 > ***CI (Continous Integration)**
 >
@@ -76,7 +76,7 @@ Github에 개발한 코드만 올리면 바로 배포가 되는 것이죠. 이�
 ![API Testing Automation and CI/CD Tools - API Fortress](https://apifortress.com/wp-content/uploads/2020/12/CICDlogos.png)
 (출처: https://apifortress.com/wp-content/uploads/2020/12/CICDlogos.png)
 
-CI/CD 도구로는 Jenkins, CircleCI, Travis, Github Action, BuddyWorks와 같은 것들이 있습니다. CI와 CD를 하나의 도구로 사용하기도 하며, 경우에 따라서 분리하여 사용하기도 합니다.
+CI/CD 도구로는 Jenkins, CircleCI, Travis, GitHub Action, BuddyWorks와 같은 것들이 있습니다. CI와 CD를 하나의 도구로 사용하기도 하며, 경우에 따라서 분리하여 사용하기도 합니다.
 
 이러한 CI/CD 개념과 도구 덕분에 개발자들은 더욱 빠르게 배포할 수 있었습니다. 빠르게 배포 후 피드백을 받으니 개발 진척 속도도 더 빨라졌습니다.
 

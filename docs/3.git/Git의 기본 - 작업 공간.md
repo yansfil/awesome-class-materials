@@ -1,23 +1,22 @@
-# Git 기본 이해하기
+# 작업 공간
 ## Git의 4가지 작업공간
 ![img](https://grabyroom.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd758f53f-4f55-4b05-91ad-d97d929a9c00%2FUntitled.png?table=block&id=15bf3b93-7af8-4a58-ba26-e993b3098be9&spaceId=c6d14725-dc16-47d9-8702-41888141488c&width=3580&userId=&cache=v2)
 
 Git에는 크게 4가지 작업 공간이 있습니다.
 
 ### workspace
-- 우리가 작업하는 일반적인 공간입니다. `git` 을 쓰기 이전 맨 처음 상태라고 보시면 됩니다.
-- `git add` 명령어 이전에는 우리의 작업물들은 이 공간으로 보낼 수 있습니다.
-- 이 공간에 있는 파일들은 `git` 에서 관리하지 않습니다.
+- 우리가 작업하는 일반적인 공간입니다. `git` 을 쓰기 이전 처음 상태입니다.
+- `git add` 명령어 이전에는 변경 사항들은 workspace에 기록됩니다.
 
 ### index
-- 변경되는 모든 파일 및 폴더들을 추적하는 공간입니다.
+- 변경되는 모든 파일 및 폴더들을 추적하는 공간입니다. staging Area 라고도 이야기합니다.
 - `git add` 명령어로 workspace 공간에 있는 작업물을 이 공간으로 보낼 수 있습니다.
 - 우리가 관심있고, 최종적으로 커밋하고자 하는 작업물들을 이 공간으로 두면 됩니다.
-- 한번 `index` 에 올라갔던 파일들은 git에서 계속해서 추적합니다.
+- 한 번 `index` 에 올라갔던 파일들은 git에서 계속해서 추적합니다.
 
 ### local repository
 - 최종적으로 커밋된 작업물들이 놓이게 되는 공간입니다.
-- `git commit` 명령어로 index 공간에 있는 작업물을 이 공간으로 보낼 수 있습니다.
+- `git commit` 명령어로 index에 있는 파일들을 이 공간으로 보낼 수 있습니다.
 - 최종적으로 우리가 작업한 내용들이 이 공간에 기록됩니다.
 
 ### remote repository
@@ -25,8 +24,8 @@ Git에는 크게 4가지 작업 공간이 있습니다.
 - 여러 사람이 같이 협업할 때 이 공간을 사용합니다.
 - `git push` 명령어로 local repository 공간에 있는 작업물을 이 공간으로 보낼 수 있습니다.
 - `git fetch` 나 `git pull` 명령어로 이 공간에 있는 작업물을 local repository로 가져올 수 있습니다.
-- 이 공간에 있는 작업물들을 보통 협업에 있어 가장 최신 버전의 작업물이라고 간주하곤 합니다.
-- GitHub, BitBucket, GitLab 등이 이 공간을 구현한 Git 호스팅 서비스 입니다.
+- 이 공간에 있는 작업물들을 보통 협업에서 가장 최신 버전의 작업물이라고 간주합니다.
+- GitHub, BitBucket, GitLab 등이 이 공간을 구현한 Git 호스팅 서비스입니다.
 
 <br>
 
@@ -36,7 +35,7 @@ Git에는 크게 4가지 작업 공간이 있습니다.
 
 일반적으로 작업 흐름에서 공간은 workspace -> index -> local repository -> remote repository 을 거치게 됩니다.
 
-먼저 터미널에서 예시에 사용할 작업을 담을 디렉토리를 하나 만들고 진입한 뒤, Git 사용을 위해 초기화 합니다.
+먼저 터미널에서 예시에 사용할 작업을 담을 디렉토리를 하나 만들고 진입한 뒤, Git 사용을 위해 초기화합니다.
 
 ```bash
 # 예시를 위한 간단한 git 작업 공간을 만듭니다.
@@ -45,7 +44,7 @@ $ cd git_example
 $ git init
 ```
 
-간단한 파일을 두 개 만들어봅시다. 이게 우리의 작업물이라고 해보죠.
+간단한 파일을 두 개 만들어봅시다. 
 
 ```bash
 # 새로 생긴 파일은 workspace 공간에 놓입니다.
@@ -108,7 +107,7 @@ $ git commit -m "a 파일을 추가한다"
  create mode 100644 a
 ```
 
-`git add` 와 `git commit` 을 한번만 더 해봅시다.
+`git add` 와 `git commit` 을 한 번만 더 해봅시다.
 이번에는 `a` 에 있는 내용을 다음처럼 수정합니다.
 
 ```bash
@@ -143,7 +142,7 @@ $ git status
 
 ```bash
 $ git add a
-$ git commit -m "a 파일을 업데이트 한다"
+$ git commit -m "a 파일을 업데이트한다"
 ```
 
 local repository에 기록된 커밋 로그들은 다음처럼 `git log` 로 확인할 수 있습니다.
@@ -173,7 +172,7 @@ Date:   Tue Aug 17 20:34:32 2021 +0900
 $ git remote add origin git@github.com:grab/git-example.git
 ```
 
-한번 등록해두면 다음처럼 `git push origin master` 로 올릴 수 있습니다.
+한 번 등록해두면 다음처럼 `git push origin master` 로 올릴 수 있습니다.
 
 ```bash
 $ git push origin master
@@ -210,6 +209,6 @@ $ git pull origin master
 ## 정리
 - Git은 분산 버전 관리 도구로, 작업 내역을 저장할 수 있고 여러 사람과 협업하는데 필수적으로 쓰입니다.
 - Git에는 workspace, index, local repository, remote repository의 4가지 공간이 있습니다.
-    - 보통 왼쪽에서 오른쪽 순으로 작업흐름이 진행됩니다.
+    - 보통 왼쪽에서 오른쪽 순으로 작업 흐름을 가져갑니다.
     - 보통 remote repository에서 최신 업데이트된 작업 내역을 받아옵니다.
     - remote repository로는 GitHub, BitBucket, Gitlabs 와 같은 깃 호스팅 서비스를 사용합니다.
