@@ -107,6 +107,7 @@ module.exports = {
           '/3.git/상황별 Git 사용하기 - 5. revert.md',
           '/3.git/상황별 Git 사용하기 - 6. rebase-interactive.md',
           '/3.git/상황별 Git 사용하기 - 7. merge.md',
+          '/3.git/실전 Conflict 다루기.md',
           '/3.git/전략적으로 git 사용하기 - Gitflow.md',
         ]
       },
