@@ -33,7 +33,7 @@ class Designer:
     def design(self):
         print("디자인을 합니다")
 
-class Analyzer:
+class Analyst:
     def analyze(self):
         print("분석을 합니다")
 ```

@@ -19,7 +19,7 @@ class Designer:
     def design(self):
         print("디자인을 합니다")
 
-class Analyzer:
+class Analyst:
     def analyze(self):
         print("분석을 합니다")
 
@@ -34,7 +34,7 @@ class Company:
                 employee.coding()
             elif type(employee) == Designer:
                 employee.design()
-            elif type(employee) == Analyzer:
+            elif type(employee) == Analyst:
                 employee.analyze()
 ```
 
@@ -55,7 +55,7 @@ class Designer(Employee):
     def work(self):
         print("디자인을 합니다")
 
-class Analyzer(Employee):
+class Analyst(Employee):
     def work(self):
         print("분석을 합니다")
 
