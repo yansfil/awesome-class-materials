@@ -1,24 +1,22 @@
 # [reset] 커밋, 변경사항을 초기화하고 싶어요
 
-다음과 같이 두 개의 커밋이 있는 상황에서, 우리는 `a 파일을 추가한다` 커밋 시점으로 초기화하고 싶다고 합시다. 
+다음과 같이 두 개의 커밋이 있는 상황에서, 우리는 `a 파일을 추가한다` 커밋 시점으로 초기화하고 싶습니다.
 
 ```bash
 $ git log --oneline
 
-c008c47 a 파일을 업데이트 한다
+c008c47 a 파일을 업데이트한다
 b014111 a 파일을 추가한다
 ```
 
 이때 `git reset` 명령어를 사용하면 됩니다. `git reset` 명령어는 아래와 같은 옵션을 가지고 있습니다.
 
-
-
-## `git reset {커밋 ID} --hard`
+## `git reset --hard {커밋 ID}`
 
 특정 커밋 시점으로 돌아갈 때, 해당 커밋 이후 만들어진 모든 작업물을 삭제합니다.
 
 ```bash
-$ git reset b014111 --hard
+$ git reset --hard b014111 
 
 HEAD의 현재 위치는 b014111입니다 a 파일을 추가한다
 
@@ -36,7 +34,7 @@ $ git status
 
 
 
-## `git reset {커밋 ID} --mixed`
+## `git reset --mixed {커밋 ID}`
 
 특정 커밋 시점으로 돌아갈 때, 해당 커밋 이후 모든 작업물은 workspace 공간에 unstaged 상태로 남게 됩니다.
 
@@ -65,7 +63,7 @@ $ git status
 
 
 
-## `git reset {커밋 ID} --soft`
+## `git reset --soft {커밋 ID}`
 
 특정 커밋 시점으로 돌아갈 때, 해당 커밋 이후 모든 작업물은 index 공간에 staged 상태로 남게 됩니다.
 

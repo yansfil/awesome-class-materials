@@ -112,11 +112,11 @@ module.exports = {
                 children: [
                     '/3.git/상황별 Git 사용하기 - 1. log&reflog.md',
                     '/3.git/상황별 Git 사용하기 - 2. reset.md',
-                    '/3.git/상황별 Git 사용하기 - 3. stash.md',
-                    '/3.git/상황별 Git 사용하기 - 4. cherrypick.md',
-                    '/3.git/상황별 Git 사용하기 - 5. revert.md',
-                    '/3.git/상황별 Git 사용하기 - 6. rebase-interactive.md',
-                    '/3.git/상황별 Git 사용하기 - 7. merge.md',
+                    '/3.git/상황별 Git 사용하기 - 3. revert.md',
+                    '/3.git/상황별 Git 사용하기 - 4. rebase-interactive.md',
+                    '/3.git/상황별 Git 사용하기 - 5. merge.md',
+                    '/3.git/상황별 Git 사용하기 - 6. stash.md',
+                    '/3.git/상황별 Git 사용하기 - 7. cherrypick.md',
                 ]
             },
             '/3.git/실전 Conflict 다루기.md',
@@ -127,7 +127,7 @@ module.exports = {
         title: '4. 코드로 알아보는 객체 지향 프로그래밍',
         collapsable: false,
         children: [
-            '/4.object-oriented/프로그래밍 패러다임 한 번에 이해하기.md',
+            '/4.object-oriented/프로그래밍 패러다임 한번에 이해하기.md',
             '/4.object-oriented/객체 지향 기본적인 개념들 짚고 가기.md',
             '/4.object-oriented/코드로 알아보는 객체 지향의 특성.md'
         ]

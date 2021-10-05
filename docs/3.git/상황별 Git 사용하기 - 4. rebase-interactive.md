@@ -1,8 +1,12 @@
-# 6. [amend commit & rebase] 이전에 쌓인 커밋들을 변경하고 싶어요. 
+# [amend commit & rebase] 이전에 쌓인 커밋들을 변경하고 싶어요. 
 Git을 사용하다 보면 이전 커밋을 변경해야 하는 경우들이 종종 있습니다. 커밋 메시지를 수정하고 싶다거나 변경된 파일 일부를 되돌릴 수도 있습니다.
 
-- 현재 작업중인 커밋(HEAD) 간단하게 수정할 때 `git commit --amend`를 사용합니다.
+- 현재 작업 중인 커밋(HEAD) 간단하게 수정할 때 `git commit --amend`를 사용합니다.
 - 아래에 있는 커밋들 중 일부를 수정하거나 변경할 때 `git rebase --interactive`를 사용합니다.
+
+:::tip
+`git revert`의 경우 대상 커밋을 되돌리는 새로운 커밋을 만드는 기능이며, 커밋 자체를 변경하지는 못합니다
+:::
 
 ## `git commit --amend`
 `--amend`는 현재 커밋(HEAD) 위에 변경사항을 덮어씌울 때 사용하는 옵션입니다. 커밋을 한 후 추가적인 변경사항이 생겼거나 커밋 메시지를 변경하고 싶을 때 많이 사용합니다.
@@ -107,7 +111,7 @@ edit bdc0d87 b를 추가한다 # 약자로 e를 넣어도 무방합니다.
 pick bec1c83 c를 추가한다
 
 #저장 후 
-bdc0d87...  b를 추가한다 위치에서 멈췄습니다
+bdc0d87...  b를 추가한다 # 해당 위치에서 멈췄습니다
 You can amend the commit now, with
 
   git commit --amend
@@ -160,7 +164,7 @@ $ git rebase --skip
 # 다음 변경할 commit으로 HEAD가 옮겨갑니다.
 ```
 
-만약 rebase 하는 과정에서 전체를 취소하고 싶을 수 있습니다. 그 때는 `git rebase --abort`를 사용하면 됩니다.
+만약 rebase 하는 과정에서 전체를 취소하고 싶을 수 있습니다. 이때 `git rebase --abort`를 사용하면 됩니다.
 
 ```bash
 $ git rebase --abort

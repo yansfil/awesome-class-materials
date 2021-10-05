@@ -37,7 +37,7 @@ $ git log -n 10
 # 최근 10개의 커밋들만 보여줍니다. 
 ```
 
-저같은 경우 git을 그래프 형태로 깔끔하게 보고 싶을 때 아래와 같이 사용합니다.  
+저 같은 경우 git을 그래프 형태로 깔끔하게 보고 싶을 때 아래와 같이 사용합니다.  
 커밋의 전체적인 방향과 머지된 흐름도 파악할 수 있습니다.
 
 ```bash
@@ -45,7 +45,7 @@ git log --oneline --decorate --graph
 ```
 
 :::tip
-커밋과 브랜치의 히스토리를 다양하고 쉽게 보여주는 `Sourcetree`나 `GitHub Desktop` 같은 GUI 툴을 사용해보시는 걸 추천 드립니다.
+커밋과 브랜치의 히스토리를 다양하고 쉽게 보여주는 `Sourcetree`나 `GitHub Desktop` 같은 GUI 툴을 사용해보시는 걸 추천드립니다.
 :::
 
 ## `git show`
@@ -93,6 +93,7 @@ HEAD의 이전 커밋들을 확인하고 싶을 땐 HEAD`^` 혹은 HEAD`~`으로
 ```bash
 $ git reflog
 
+
 c008c47 (HEAD -> master) HEAD@{0}: commit: a 파일을 업데이트한다
 b014111 HEAD@{1}: commit (initial): a 파일을 추가한다
 ```
@@ -114,7 +115,7 @@ HEAD의 현재 위치는 0379a06입니다 b 파일을 추가한다
 ```bash
 $ git reflog
 
-# 왼쪽 첫 번째 값은 명령이 발생하기 전 커밋 해시입니다.
+
 0379a06 (HEAD - my-branch) HEAD@{0}: reset: moving to 0379a069b014afc2c256f3d94c4fb93fd833003e
 c7591af HEAD@{1}: checkout: moving from master to my-branch
 9cb8a3b (master) HEAD@{2}: rebase (finish): returning to refs/heads/master
@@ -126,5 +127,5 @@ c7591af HEAD@{4}: rebase (start): checkout my-branch
 따라서 `git reset --hard` 한 명령을 취소하고 싶으면 (명령 이전으로 돌아가고 싶으면) `git reflog` 에서 해당 명령 직전의 커밋 해시 값을 참조하여 `git reset --hard` 하면 됩니다.
 
 ```bash
-$ git reset c7591af
+$ git reset c7591af --hard
 ```
