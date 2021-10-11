@@ -81,3 +81,16 @@ $ git status
   (use "git restore --staged <file>..." to unstage)
 	수정함:        a
 ```
+
+## `git restore {파일 경로}`
+특정 파일의 변경사항을 제거하고 HEAD 기준으로 되돌리고 싶을 때, restore를 사용할 수 있습니다
+
+workspace에 있는 변경 사항을 되돌릴 때 : `git restore {파일경로}`  
+stage(index)에 있는 변경 사항을 되돌릴 때 : `git restore --staged {파일 경로}`
+
+```bash
+# 아직 stage(index)에 올라가지 않은 README.md 파일을 되돌릴 때  
+$ git restore README.md
+# stage(index)에 올라간 README.md 파일을 되돌릴 때 (workspace로 돌아갑니다) 
+$ git restore --staged README.md
+```
