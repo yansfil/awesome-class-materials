@@ -95,6 +95,13 @@ module.exports = {
         ]
       },
       {
+        title: '실습 환경 구축하기',
+        collapsable: false,
+        children: [
+            '/3.0. 사전준비/requirement.md'
+        ]
+      },
+      {
         title: '3. 협업의 필수 Git, 실무 위주로 익혀보기',
         collapsable: false,
         children: [
