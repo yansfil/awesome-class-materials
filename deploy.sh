@@ -15,10 +15,10 @@ git add -A
 git commit -m 'deploy'
 
 # https://<USERNAME>.github.io 에 배포하는 경우
-# git push -f https://github.com/<USERNAME>/<USERNAME>.github.io.git master
+# git push -f https://github.com/<USERNAME>/<USERNAME>.github.io.git main
 
 # https://<USERNAME>.github.io/<REPO> 에 배포하는 경우
-# git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
+# git push -f https://github.com/<USERNAME>/<REPO>.git main:gh-pages
 
 # 필자의 경우 TIL repository에 배포하기 때문에 아래와 같이 작성했다.
 git push -f https://github.com/yansfil/awesome-class-vuepress.git main:gh-pages

@@ -52,13 +52,18 @@ $ touch a
 $ touch b
 ```
 
+:::tip
+`touch`는 linux, mac에서 사용가능한 명령어입니다.   
+windows에서 리눅스 명령어를 사용하도록 돕는 wsl을 설치하거나 `type nul > your_file.txt`을 사용하시면 됩니다.
+:::
+
 위 파일들은 아직 `git add` 하지 않았으므로 workspace 공간에 놓이게 됩니다. workspace 공간에 있는 작업물은 `git status` 에서 확인할 수 있습니다.
 
 ```bash
 # workspace 공간에 놓인 파일들은 `추적하지 않는 파일` 목록에 들어갑니다.
 $ git status
 
-현재 브랜치 master
+현재 브랜치 main
 
 아직 커밋이 없습니다
 
@@ -83,7 +88,7 @@ $ git add a
 # index 공간에 놓인 파일들은 `커밋할 변경 사항` 목록에 들어갑니다.
 $ git status
 
-현재 브랜치 master
+현재 브랜치 main
 
 아직 커밋이 없습니다
 
@@ -102,7 +107,7 @@ $ git status
 # git commit 명령어로 index 공간에 있는 작업물을 local repository 공간으로 보냅니다.
 $ git commit -m "a 파일을 추가한다"
 
-[master (최상위-커밋) b014111] a 파일을 추가한다
+[main (최상위-커밋) b014111] a 파일을 추가한다
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 a
 ```
@@ -124,7 +129,7 @@ this is a
 # "커밋하도록 정하지 않은 변경 사항"를 통해 a파일이 수정되었음을 알 수 있습니다.
 $ git status
 
-현재 브랜치 master
+현재 브랜치 main
 커밋하도록 정하지 않은 변경 사항:
   (무엇을 커밋할지 바꾸려면 "git add <파일>..."을 사용하십시오)
   (use "git restore <file>..." to discard changes in working directory)
@@ -142,7 +147,7 @@ $ git status
 
 ```bash
 $ git add a
-$ git commit -m "a 파일을 업데이트한다"
+$ git commit -m "a 파일을 수정한다"
 ```
 
 local repository에 기록된 커밋 로그들은 다음처럼 `git log` 로 확인할 수 있습니다.
@@ -150,11 +155,11 @@ local repository에 기록된 커밋 로그들은 다음처럼 `git log` 로 확
 ```bash
 $ git log
 
-commit c008c4785eeb14a395b4aa6cf9fa3b9e5896f5a4 (HEAD -> master)
+commit c008c4785eeb14a395b4aa6cf9fa3b9e5896f5a4 (HEAD -> main)
 Author: grab <grab@gmail.com>
 Date:   Tue Aug 17 21:21:45 2021 +0900
 
-    a 파일을 업데이트한다
+    a 파일을 수정한다
 
 commit b014111c82fa239b771b2b6d6bdc567282e7b325
 Author: grab <grab@gmail.com>
@@ -170,12 +175,14 @@ Date:   Tue Aug 17 20:34:32 2021 +0900
 
 ```bash
 $ git remote add origin git@github.com:grab/git-example.git
+$ git branch -M main
+$ git push -u origin main
 ```
 
-한 번 등록해두면 다음처럼 `git push origin master` 로 올릴 수 있습니다.
+한 번 등록해두면 다음에는 `git push origin main` 로 올릴 수 있습니다.
 
 ```bash
-$ git push origin master
+$ git push origin main
 ```
 
 
@@ -191,7 +198,7 @@ $ git clone git@github.com:grab/git-example.git
 만약 처음 다운로드하는 상황이 아니고, 이미 자신의 컴퓨터에 있고 개발자 A가 remote repository에 업데이트한 작업 내역을 받아오고 싶다면 다음처럼 `git pull` 명령어를 사용하면 됩니다.
 
 ```bash
-$ git pull origin master
+$ git pull origin main
 ```
 
 개발자가 B가 자신의 컴퓨터에 작업 내용을 모두 다운로드 혹은 업데이트한 이후 계속해서 자신의 작업을 해나가면 됩니다. 이때부터 개발자 B역시 위에서 설명한 일반적인 작업 흐름의 과정을 거쳐서 최종적으로 remote repository에 작업 내역을 업데이트하게 됩니다.
@@ -201,8 +208,8 @@ $ git pull origin master
   ```
   git add : workspace -> index
   git commit : index -> local repository
-  git push : local repository -> origin repository
-  git pull, fetch : origin repoistory -> local repository
+  git push : local repository -> remote repository
+  git pull, fetch : origin repoistory -> remote repository
   ```
 
 

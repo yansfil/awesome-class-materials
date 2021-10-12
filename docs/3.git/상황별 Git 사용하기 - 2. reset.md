@@ -5,7 +5,7 @@
 ```bash
 $ git log --oneline
 
-c008c47 a 파일을 업데이트한다
+c008c47 a 파일을 수정한다
 b014111 a 파일을 추가한다
 ```
 
@@ -26,7 +26,7 @@ b014111 a 파일을 추가한다
 
 $ git status
 
-현재 브랜치 master
+현재 브랜치 main
 커밋할 사항 없음, 작업 폴더 깨끗함
 ```
 
@@ -50,7 +50,7 @@ b014111 a 파일을 추가한다
 
 $ git status
 
-현재 브랜치 master
+현재 브랜치 main
 커밋하도록 정하지 않은 변경 사항:
   (무엇을 커밋할지 바꾸려면 "git add <파일>..."을 사용하십시오)
   (use "git restore <file>..." to discard changes in working directory)
@@ -76,7 +76,7 @@ b014111 a 파일을 추가한다
 
 $ git status
 
-현재 브랜치  master
+현재 브랜치  main
 커밋할 변경 사항:
   (use "git restore --staged <file>..." to unstage)
 	수정함:        a

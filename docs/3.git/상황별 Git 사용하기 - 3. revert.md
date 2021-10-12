@@ -9,11 +9,11 @@
 $ git log --oneline
 
 875a6e6 b 파일을 추가한다
-1fc71a0 a 파일을 업데이트한다
+1fc71a0 a 파일을 수정한다
 b014111 a 파일을 추가한다
 ```
 
-이때 우리는 `1fc71a0 (a 파일을 업데이트한다)` 커밋 내용을 다시 되돌리고 싶습니다. 그리고 `1fc71a0` 커밋 내용은 이미 remote repository 공간에 올라갔습니다.
+이때 우리는 `1fc71a0 (a 파일을 수정한다)` 커밋 내용을 다시 되돌리고 싶습니다. 그리고 `1fc71a0` 커밋 내용은 이미 remote repository 공간에 올라갔습니다.
 
 앞에서 배운 `git reset 1fc71a0 --hard` 명령어를 입력하면 될 것 같지만 remote repository로 올릴 때 (`git push`) `--force` 명령어를 줘야 합니다. 그러나 대게 최신 작업물이 있는 remote repository에 `git push --force` 명령어를 사용하지 않는게 일반적입니다. 잘못했다가 다른 팀원이 올린 작업물을 지워버릴 수 있기 때문이죠. 그래서 보통 remote repsotiory 단에서 `git push --force` 요청은 받아들일 수 없게 막곤 합니다.
 
@@ -28,7 +28,7 @@ This reverts commit 1fc71a0e2b3839cdd0ada557df823609f234610a.
 # 변경 사항에 대한 커밋 메시지를 입력하십시오. '#' 문자로 시작하는
 # 줄은 무시되고, 메시지를 입력하지 않으면 커밋이 중지됩니다.
 #
-# 현재 브랜치 master
+# 현재 브랜치 main
 # 커밋할 변경 사항:
 #       수정함:        a
 #

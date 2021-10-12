@@ -14,8 +14,8 @@
 
 `git merge`는 가장 기본적인 머지 방식입니다.
 
-기존 `master` 브랜치로 부터 `feature-branch` 브랜치를 만들어 둡니다. 
-현재 master 브랜치는 다음과 같은 커밋 기록이 있습니다. 
+기존 `main` 브랜치로 부터 `feature-branch` 브랜치를 만들어 둡니다. 
+현재 main 브랜치는 다음과 같은 커밋 기록이 있습니다. 
 
 ```bash
 $ git switch -c feature-branch
@@ -24,7 +24,7 @@ $ git switch -c feature-branch
 
 $ git log --oneline
 
-7404163 (HEAD -> master, feature-branch) c 파일을 추가한다
+7404163 (HEAD -> main, feature-branch) c 파일을 추가한다
 c315709 b 파일을 추가한다
 b014111 a 파일을 추가한다
 ```
@@ -35,17 +35,17 @@ b014111 a 파일을 추가한다
 $ git commit -m "a 파일을 수정합니다"
 ```
 
-이제 `feature-branch` 브랜치에서 작업한 내용을 하나의 커밋으로 만들어 `master` 브랜치에 합치고 싶습니다. 
-이때 사용하는 명령어가 `git merge` 입니다. 합치기 위해 먼저 `master` 브랜치로 이동합니다.
+이제 `feature-branch` 브랜치에서 작업한 내용을 하나의 커밋으로 만들어 `main` 브랜치에 합치고 싶습니다. 
+이때 사용하는 명령어가 `git merge` 입니다. 합치기 위해 먼저 `main` 브랜치로 이동합니다.
 
 ```bash
  
-$ git switch master
+$ git switch main
 
-'master' 브랜치로 전환합니다
+'main' 브랜치로 전환합니다
 ```
 
-만약 `master` 브랜치로부터  `feature-branch` 브랜치를 만든 이후, `master` 브랜치에 추가 커밋이 없는 상태라면 다음처럼 `git merge` 시 `feature-branch` 의 모든 커밋이 그대로 `master` 브랜치로 들어가게 됩니다. 이를  `fast-foward` 방식이라고 합니다.
+만약 `main` 브랜치로부터  `feature-branch` 브랜치를 만든 이후, `main` 브랜치에 추가 커밋이 없는 상태라면 다음처럼 `git merge` 시 `feature-branch` 의 모든 커밋이 그대로 `main` 브랜치로 들어가게 됩니다. 이를  `fast-foward` 방식이라고 합니다.
 
 ```bash
 $ git merge feature-branch
@@ -60,14 +60,14 @@ Fast-forward
  create mode 100644 c
 ```
 
-그러나 다음처럼 병합이 이뤄지기 전 `master` 브랜치에 새로운 커밋이 생겼다고 합시다.
+그러나 다음처럼 병합이 이뤄지기 전 `main` 브랜치에 새로운 커밋이 생겼다고 합시다.
 
 ```bash
 $ touch d
 $ git add d
 $ git commit -m "d 파일을 추가한다"
 
-[master 31b3b73] d 파일을 추가한다
+[main 31b3b73] d 파일을 추가한다
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 d
 ```
@@ -94,7 +94,7 @@ Merge made by the 'recursive' strategy.
 # git log로 확인하면 Merge 내용을 나타내는 커밋이 생성되게 됩니다.
 $ git log --oneline
 
-85c04dc (HEAD -> master) Merge branch 'feature-branch'
+85c04dc (HEAD -> main) Merge branch 'feature-branch'
 31b3b73 d 파일을 추가한다
 c7591af (feature-branch) a 파일을 수정한다
 fc25d18 c 파일을 추가한다
@@ -129,18 +129,18 @@ $ git merge feature-branch --squash
 $ git commit -m "feature-branch 브랜치에서 작업한 내용을 합친다" 
 
 ...
-[master 1b8874f] feature-branch 브랜치에서 작업한 내용을 합친다
+[main 1b8874f] feature-branch 브랜치에서 작업한 내용을 합친다
  3 files changed, 1 insertion(+)
  create mode 100644 b
  create mode 100644 c
 ```
 
-이제 다음처럼 `git log` 로 커밋 내역을 확인해보면 `feature-branch` 에서 작업한 커밋들을 위에서 작성한 하나의 커밋으로 만들어져서  `master` 브랜치에 합쳐진 것을 확인할 수 있습니다.
+이제 다음처럼 `git log` 로 커밋 내역을 확인해보면 `feature-branch` 에서 작업한 커밋들을 위에서 작성한 하나의 커밋으로 만들어져서  `main` 브랜치에 합쳐진 것을 확인할 수 있습니다.
 
 ```bash
 $ git log --oneline
 
-1b8874f (HEAD -> master) feature-branch 브랜치에서 작업한 내용을 합친다
+1b8874f (HEAD -> main) feature-branch 브랜치에서 작업한 내용을 합친다
 31b3b73 d 파일을 추가한다
 b014111 c 파일을 추가한다
 b014111 b 파일을 추가한다
@@ -156,7 +156,7 @@ b014111 a 파일을 추가한다
 
 Rebase & Merge 방식은 `merge` 할 때 `merge 커밋` 을 남기지 않으면서도, `merge` 되는 브랜치의 모든 커밋 내역을 그대로 가져오는 머지입니다. 명령어는 `git rebase` 입니다.
 
-위의 예시와 마찬가지로 `master` 브랜치로부터 생성된 `feature-branch` 브랜치에는 다음과 같은 작업내역이 있다고 합시다.
+위의 예시와 마찬가지로 `main` 브랜치로부터 생성된 `feature-branch` 브랜치에는 다음과 같은 작업내역이 있다고 합시다.
 
 ```bash
 $ git log --oneline
@@ -167,17 +167,17 @@ fc25d18 c 파일을 추가한다
 b014111 a 파일을 추가한다
 ```
 
-이제 master 브랜치로 돌아온 후 `git rebase` 를 사용하면 대상이 되는 `feature-branch`의 커밋 내역들은 master 브랜치 위로 옮겨집니다
+이제 main 브랜치로 돌아온 후 `git rebase` 를 사용하면 대상이 되는 `feature-branch`의 커밋 내역들은 main 브랜치 위로 옮겨집니다
 
 ```bash
-$ git switch master
+$ git switch main
 $ git rebase feature-branch
 
-Successfully rebased and updated refs/heads/master.
+Successfully rebased and updated refs/heads/main.
 
 $ git log --oneline
 
-9cb8a3b (HEAD -> master, feature-branch) a 파일을 추가한다
+9cb8a3b (HEAD -> main, feature-branch) a 파일을 추가한다
 c7591af d 파일을 추가한다
 fc25d18 c 파일을 추가한다
 0379a06 b 파일을 추가한다

@@ -7,11 +7,11 @@
 ```bash
 $ git log
 
-commit c008c4785eeb14a395b4aa6cf9fa3b9e5896f5a4 (HEAD -> master)
+commit c008c4785eeb14a395b4aa6cf9fa3b9e5896f5a4 (HEAD -> main)
 Author: grab <grab@gmail.com>
 Date:   Tue Aug 17 21:21:45 2021 +0900
 
-    a 파일을 업데이트한다
+    a 파일을 수정한다
 
 commit b014111c82fa239b771b2b6d6bdc567282e7b325
 Author: grab <grab@gmail.com>
@@ -25,7 +25,7 @@ Date:   Tue Aug 17 20:34:32 2021 +0900
 ```bash
 $ git log --oneline
 
-c008c47 (HEAD -> master) a 파일을 업데이트한다
+c008c47 (HEAD -> main) a 파일을 수정한다
 b014111 a 파일을 추가한다
 ```
 
@@ -55,11 +55,11 @@ git log --oneline --decorate --graph
 ```bash
 $ git show
 
-commit c008c4785eeb14a395b4aa6cf9fa3b9e5896f5a4 (HEAD -> master)
+commit c008c4785eeb14a395b4aa6cf9fa3b9e5896f5a4 (HEAD -> main)
 Author: grab <grab@gmail.com>
 Date:   Tue Aug 17 21:21:45 2021 +0900
 
-    a 파일을 업데이트한다
+    a 파일을 수정한다
 
 diff --git a/a b/a
 index e69de29..9e365c8 100644
@@ -94,7 +94,7 @@ HEAD의 이전 커밋들을 확인하고 싶을 땐 HEAD`^` 혹은 HEAD`~`으로
 $ git reflog
 
 
-c008c47 (HEAD -> master) HEAD@{0}: commit: a 파일을 업데이트한다
+c008c47 (HEAD -> main) HEAD@{0}: commit: a 파일을 수정한다
 b014111 HEAD@{1}: commit (initial): a 파일을 추가한다
 ```
 
@@ -117,9 +117,9 @@ $ git reflog
 
 
 0379a06 (HEAD - my-branch) HEAD@{0}: reset: moving to 0379a069b014afc2c256f3d94c4fb93fd833003e
-c7591af HEAD@{1}: checkout: moving from master to my-branch
-9cb8a3b (master) HEAD@{2}: rebase (finish): returning to refs/heads/master
-9cb8a3b (master) HEAD@{3}: rebase (pick): d 파일을 추가한다
+c7591af HEAD@{1}: checkout: moving from main to my-branch
+9cb8a3b (main) HEAD@{2}: rebase (finish): returning to refs/heads/main
+9cb8a3b (main) HEAD@{3}: rebase (pick): d 파일을 추가한다
 c7591af HEAD@{4}: rebase (start): checkout my-branch
 31b3b73 HEAD@{5}: reset: moving to 31b3b73dc282d37a30b9d0242f18dfaf69878c0b
 ```
