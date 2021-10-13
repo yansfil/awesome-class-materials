@@ -167,13 +167,13 @@ fc25d18 c 파일을 추가한다
 b014111 a 파일을 추가한다
 ```
 
-이제 main 브랜치로 돌아온 후 `git rebase` 를 사용하면 대상이 되는 `feature-branch`의 커밋 내역들은 main 브랜치 위로 옮겨집니다
+위 두 머지 방식과 다르게 rebase의 경우 병합이 될 브랜치에서 `git rebase {대상 브랜치}`를 사용해주시면 됩니다
 
 ```bash
-$ git switch main
-$ git rebase feature-branch
+$ git switch feature-branch
+$ git rebase main
 
-Successfully rebased and updated refs/heads/main.
+Successfully rebased and updated refs/heads/feature-branch.
 
 $ git log --oneline
 

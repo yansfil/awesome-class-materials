@@ -119,10 +119,10 @@ module.exports = {
                 children: [
                     '/3.git/상황별 Git 사용하기 - 1. log&reflog.md',
                     '/3.git/상황별 Git 사용하기 - 2. reset.md',
+                    '/3.git/상황별 Git 사용하기 - 6. stash.md',
                     '/3.git/상황별 Git 사용하기 - 3. revert.md',
                     '/3.git/상황별 Git 사용하기 - 4. rebase-interactive.md',
                     '/3.git/상황별 Git 사용하기 - 5. merge.md',
-                    '/3.git/상황별 Git 사용하기 - 6. stash.md',
                     '/3.git/상황별 Git 사용하기 - 7. cherrypick.md',
                 ]
             },

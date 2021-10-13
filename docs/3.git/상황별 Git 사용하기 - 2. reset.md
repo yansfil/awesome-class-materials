@@ -1,4 +1,4 @@
-# [reset] 커밋, 변경사항을 초기화하고 싶어요
+# [restore & reset] 변경사항, 커밋을 초기화하고 싶어요
 
 다음과 같이 두 개의 커밋이 있는 상황에서, 우리는 `a 파일을 추가한다` 커밋 시점으로 초기화하고 싶습니다.
 
@@ -36,7 +36,7 @@ $ git status
 
 ## `git reset --mixed {커밋 ID}`
 
-특정 커밋 시점으로 돌아갈 때, 해당 커밋 이후 모든 작업물은 workspace 공간에 unstaged 상태로 남게 됩니다.
+특정 커밋 시점으로 돌아갈 때, 해당 커밋 이후 모든 작업물은 `workspace` 공간에 unstaged 상태로 남게 됩니다.
 
 ```bash
 $ git reset b014111 --mixed
@@ -65,7 +65,7 @@ $ git status
 
 ## `git reset --soft {커밋 ID}`
 
-특정 커밋 시점으로 돌아갈 때, 해당 커밋 이후 모든 작업물은 index 공간에 staged 상태로 남게 됩니다.
+특정 커밋 시점으로 돌아갈 때, 해당 커밋 이후 모든 작업물은 `index` 공간에 staged 상태로 남게 됩니다.
 
 ```bash
 $ git reset b014111 --soft
@@ -83,14 +83,16 @@ $ git status
 ```
 
 ## `git restore {파일 경로}`
-특정 파일의 변경사항을 제거하고 HEAD 기준으로 되돌리고 싶을 때, restore를 사용할 수 있습니다
+특정 파일의 변경사항을 제거하고 HEAD 기준으로 되돌리고 싶을 때, restore를 사용할 수 있습니다.
 
 workspace에 있는 변경 사항을 되돌릴 때 : `git restore {파일경로}`  
-stage(index)에 있는 변경 사항을 되돌릴 때 : `git restore --staged {파일 경로}`
 
 ```bash
 # 아직 stage(index)에 올라가지 않은 README.md 파일을 되돌릴 때  
 $ git restore README.md
-# stage(index)에 올라간 README.md 파일을 되돌릴 때 (workspace로 돌아갑니다) 
-$ git restore --staged README.md
 ```
+
+:::tip
+`git restore`는 `git reset --hard HEAD`와 비슷한 결과를 냅니다.   
+다만 restore는 새 파일의 변경사항을 되돌리지 않지만, reset은 새 파일의 변경사항도 되돌립니다.
+:::
