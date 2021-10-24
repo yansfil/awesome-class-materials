@@ -107,7 +107,7 @@ GitHub에서 `main` 브랜치로의 PR(Pull Request) 생성함으로써 개발�
 
 ![image-20210828152600360](./images/image-20210828152600360.png)
 
-> 회사에서는 보통 GitHub나 BitBucket, GitLab과 같은 깃 호스팅 서버를 사용하는게 일반적입니다.
+> 회사에서는 보통 GitHub나 BitBucket, GitLab과 같은 깃 호스팅 서버를 사용하는 게 일반적입니다.
 
 <br>
 
