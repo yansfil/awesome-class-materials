@@ -83,51 +83,52 @@ module.exports = {
         ]
       },
       {
-        title: '2. 깔끔한 코드를 위하여! 클린코드',
-        collapsable: false,
-        children: [
-            '/2.clean-code/1. 네이밍.md',
-            '/2.clean-code/2. 주석, 포맷팅.md',
-            '/2.clean-code/3. 함수.md',
-            '/2.clean-code/4. 클래스.md',
-            '/2.clean-code/5. 에러핸들링.md',
-            '/2.clean-code/6. 가드클라우징.md',
-        ]
-      },
-      {
-        title: '실습 환경 구축하기',
-        collapsable: false,
-        children: [
-            '/3.0. 사전준비/requirement.md'
-        ]
-      },
-      {
-        title: '3. 협업의 필수 Git, 실무 위주로 익혀보기',
+        title: '2. 협업의 필수 Git, 실무 위주로 익혀보기',
         collapsable: false,
         children: [
             {
                 title: 'Git 기초 돌아보기',
                 collapsable: false,
                 children: [
-                    '/3.git/Git의 기본 - 작업 공간.md',
-                    '/3.git/Git의 기본 - 브랜치.md',
+                    '/2.git/Git의 기본 - 작업 공간.md',
+                    '/2.git/Git의 기본 - 브랜치.md',
                 ]
             },
             {
                 title: '상황별 Git 다루는 법',
                 collapsable: false,
                 children: [
-                    '/3.git/상황별 Git 사용하기 - 1. log&reflog.md',
-                    '/3.git/상황별 Git 사용하기 - 2. reset.md',
-                    '/3.git/상황별 Git 사용하기 - 6. stash.md',
-                    '/3.git/상황별 Git 사용하기 - 3. revert.md',
-                    '/3.git/상황별 Git 사용하기 - 4. rebase-interactive.md',
-                    '/3.git/상황별 Git 사용하기 - 5. merge.md',
-                    '/3.git/상황별 Git 사용하기 - 7. cherrypick.md',
+                    '/2.git/상황별 Git 사용하기 - 1. log&reflog.md',
+                    '/2.git/상황별 Git 사용하기 - 2. reset.md',
+                    '/2.git/상황별 Git 사용하기 - 6. stash.md',
+                    '/2.git/상황별 Git 사용하기 - 3. revert.md',
+                    '/2.git/상황별 Git 사용하기 - 4. rebase-interactive.md',
+                    '/2.git/상황별 Git 사용하기 - 5. merge.md',
+                    '/2.git/상황별 Git 사용하기 - 7. cherrypick.md',
                 ]
             },
-            '/3.git/실전 Conflict 다루기.md',
-            '/3.git/전략적으로 git 사용하기 - Gitflow.md',
+            '/2.git/실전 Conflict 다루기.md',
+            '/2.git/전략적으로 git 사용하기 - Gitflow.md',
+        ]
+      },
+      {
+        title: '실습 환경 구축하기',
+        collapsable: false,
+        children: [
+            '/3.0. 사전준비/requirement.md',
+            '/3.0. 사전준비/사전 파이썬 공부하기.md',
+        ]
+      },
+      {
+        title: '3. 깔끔한 코드를 위하여! 클린코드',
+        collapsable: false,
+        children: [
+            '/3.clean-code/1. 네이밍.md',
+            '/3.clean-code/2. 주석, 포맷팅.md',
+            '/3.clean-code/3. 함수.md',
+            '/3.clean-code/4. 클래스.md',
+            '/3.clean-code/5. 에러핸들링.md',
+            '/3.clean-code/6. 가드클라우징.md',
         ]
       },
       {
@@ -136,7 +137,7 @@ module.exports = {
         children: [
             '/4.object-oriented/1. 프로그래밍 패러다임 흐름 파악하기 - 절차지향.md',
             '/4.object-oriented/2. 프로그래밍 패러다임 흐름 파악하기 - 객체지향.md',
-            '/4.object-oriented/3. 프로그래밍 패러다임 흐름 파악하기 - 함수지향.md',
+            '/4.object-oriented/3. 프로그래밍 패러다임 흐름 파악하기 - 함수형.md',
             '/4.object-oriented/4. 객체 지향 기본적인 개념들 짚고 가기.md',
             '/4.object-oriented/5. 의존성 응집도 결합도.md',
             '/4.object-oriented/6. 코드로 알아보는 객체 지향의 특성.md'
