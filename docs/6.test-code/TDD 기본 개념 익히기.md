@@ -2,7 +2,7 @@
 
 ## TDD 정의
 
-TDD(Test Driven Development)는 테스트가 개발을 이끌어가는 방법론입니다. 즉, 테스트가 개발보다 선행합니다. 
+TDD(Test Driven Development)는 테스트가 개발을 이끌어가는 방법론입니다. 즉, 테스트가 개발보다 선행하게 됩니다. 
 
 개발해야 하는 사항을 미리 정의하고, 각 기능의 입/출력을 미리 정한 뒤, 기능을 구현하는 프로세스는 아주 일반적인 개발 과정입니다. 이때 TDD 방식으로 개발하게 된다면, 테스트 코드를 먼저 작성함으로써 개발사항과 각 기능의 입/출력 요구사항을 코드로 문서화한 후 기능을 개발하게 됩니다.
 
@@ -28,7 +28,7 @@ TDD(Test Driven Development)는 테스트가 개발을 이끌어가는 방법론
 import requests
 def test_login_endpoint():
     # given
-    api_host = "localhost:8000"
+    api_host = "http://localhost:8000"
     payload = {
         "id": "grab",
         "password": "1234"
@@ -90,7 +90,7 @@ def login_endpoint(req: LoginRequest):
 - 로그인 로직을 실행을 담당하는 함수
 - 토큰 생성 로직을 담당하는 함수
 
-"http 요청과 응답을 주고 받는 책임을 담당하는 함수" 부터 명확하게 만들어봅시다. 기존의 `login_endpoint` 가 이 책임을 담당하고 있었으므로, 다음처럼 리팩토링 합니다.
+http 요청과 응답을 주고 받는 책임을 담당하는 함수" 부터 명확하게 만들어봅시다. 기존의 `login_endpoint` 가 이 책임을 담당하고 있었으므로, 다음처럼 리팩토링 합니다.
 
 ```python
 from fastapi import FastAPI
@@ -169,7 +169,7 @@ def create_token(user_id: str) -> str:
 이제 모두 구현되었기 때문에 작성한 모든 테스트는 성공합니다.
 
 :::tip
-예시에서 코드를 Top-Down 방식으로 작성하였습니다. 하지만 상황에 따라 Bottom-Up 방식으로 내부 로직부터 코드를 작성할 수도 있습니다.   
+예시에서 코드를 Top-Down 방식으로 작성하였습니다. Bottom-Up 방식으로 내부 로직부터 코드를 작성하는 방식으로도 진행할 수 있습니다.    
 :::
 
 <br>

@@ -32,6 +32,9 @@ class InMemoryDatabase(Database):
     def __init__(self):
         self.data = None
     
+    def connect(uri: str):
+        pass    
+    
     def store_data(self, data):
         print("inmemory에 저장합니다")
 

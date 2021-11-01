@@ -139,8 +139,15 @@ module.exports = {
             '/4.object-oriented/2. 프로그래밍 패러다임 흐름 파악하기 - 객체지향.md',
             '/4.object-oriented/3. 프로그래밍 패러다임 흐름 파악하기 - 함수형.md',
             '/4.object-oriented/4. 객체 지향 기본적인 개념들 짚고 가기.md',
-            '/4.object-oriented/5. 의존성 응집도 결합도.md',
-            '/4.object-oriented/6. 코드로 알아보는 객체 지향의 특성.md'
+            '/4.object-oriented/5. 코드로 알아보는 객체 지향의 특성.md',
+            '/4.object-oriented/6. 의존성 응집도 결합도.md',
+        ]
+      },
+      {
+        title: '4.1. 리팩토링을 통해 객체 지향 알아보기',
+        collapsable: false,
+        children: [
+            '/4.1.object-oriented-refactoring/리팩토링전코드.md',
         ]
       },
       {
@@ -154,6 +161,7 @@ module.exports = {
             '/5.object-oriented-solid/SOLID - Dependency Inversion.md',
         ]
       },
+
       {
         title: '6. 견고한 서비스를 위한 테스트 코드 작성하기',
         collapsable: false,
