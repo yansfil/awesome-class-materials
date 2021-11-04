@@ -4,7 +4,8 @@
 
 TDD(Test Driven Development)는 테스트가 개발을 이끌어가는 방법론입니다. 즉, 테스트가 개발보다 선행하게 됩니다. 
 
-개발해야 하는 사항을 미리 정의하고, 각 기능의 입/출력을 미리 정한 뒤, 기능을 구현하는 프로세스는 아주 일반적인 개발 과정입니다. 이때 TDD 방식으로 개발하게 된다면, 테스트 코드를 먼저 작성함으로써 개발사항과 각 기능의 입/출력 요구사항을 코드로 문서화한 후 기능을 개발하게 됩니다.
+개발해야 하는 사항을 미리 정의하고, 각 기능의 입/출력을 미리 정한 뒤, 기능을 구현하는 프로세스는 아주 일반적인 개발 과정입니다. 
+이때 TDD 방식으로 개발하게 된다면, 테스트 코드를 먼저 작성함으로써 개발사항과 각 기능의 입/출력 요구사항을 코드로 문서화한 후 기능을 개발하게 됩니다.
 
 <br>
 
@@ -53,15 +54,17 @@ def test_login_endpoint():
 
 ```python
 from fastapi import FastAPI
+from dataclasses import dataclass
 
 app = FastAPI()
 
-class LoginRequest(BaseModel):
+@dataclass
+class LoginRequest:
     id: str
     password: str
         
         
-@app.get("/login")
+@app.post("/login")
 def login_endpoint(req: LoginRequest):
     user_id = req.id
     user_password = req.password
@@ -70,7 +73,7 @@ def login_endpoint(req: LoginRequest):
     user = user_repository.find_by_id(user_id)
     if user_id == user.id and user.password == user_password:
         token = user_id + "_verified"
-   	else:
+    else:
         raise Exception("로그인 인증에 실패했습니다.")
         
     return {
@@ -84,34 +87,15 @@ def login_endpoint(req: LoginRequest):
 
 ### 3. 테스트 대상 리팩토링하기
 
-테스트는 성공해서 모든 일이 끝난 것처럼 보입니다. 하지만 위 서버 코드는 현재 하나의 모듈에 너무 많은 내용을 담고있는거 같아서, SRP 원칙에 위배하는 것 같습니다. 기존 코드를 좀 더 구조적으로 리팩토링하고 싶습니다. 다음처럼 코드를 분리하고 하고싶다고 합시다.
+테스트는 성공해서 모든 일이 끝난 것처럼 보입니다. 하지만 위 서버 코드는 현재 하나의 모듈에 너무 많은 내용을 담고있는 것 같아, SRP 원칙에 위배됩니다. 
+기존 코드를 좀 더 구조적으로 리팩토링하고 싶습니다. 그래서 다음처럼 코드를 분리해보려고 합니다.
 
 - http 요청과 응답을 주고 받는 책임을 담당하는 함수
 - 로그인 로직을 실행을 담당하는 함수
 - 토큰 생성 로직을 담당하는 함수
 
-http 요청과 응답을 주고 받는 책임을 담당하는 함수" 부터 명확하게 만들어봅시다. 기존의 `login_endpoint` 가 이 책임을 담당하고 있었으므로, 다음처럼 리팩토링 합니다.
 
-```python
-from fastapi import FastAPI
-
-app = FastAPI()
-
-class LoginRequest(BaseModel):
-    id: str
-    password: str
-        
-        
-@app.get("/login")
-def login_endpoint(req: LoginRequest):
-    # 로그인 로직은 login() 함수에게 위임합니다.
-    token = login(user_id=req.id, user_password=req.password)
-    return {
-        "token": token
-    }
-```
-
-이제 "로그인 로직을 실행을 담당하는 함수"를 `login()` 으로 정의해봅시다. 테스트 코드로 `login()` 함수의 입/출력을 정의하는 것으로 시작합니다.
+먼저 "로그인 로직을 실행을 담당하는 함수"를 `login()` 으로 정의해봅시다. 테스트 코드로 `login()` 함수의 입/출력을 정의하는 것으로 시작합니다.
 
 ```python
 def test_login_successful():
@@ -144,7 +128,7 @@ def login(user_id: str, user_password: str) -> str:
     user_repository = UserRepository()  # DB와 연동되어 User 정보를 저장하고 불러오는 객체
     user = user_repository.find_by_id(user_id)
     if user_id == user.id and user.password == user_password:
-        # 토큰 생성 로직은 create_token() 함수에게 위임합니다.
+        # 토큰 생성 로직은 create_token() 함수에 위임합니다.
         return create_token(user_id)
     else:
         raise Exception("로그인 인증에 실패했습니다.")
@@ -166,6 +150,29 @@ def create_token(user_id: str) -> str:
     return user_id + "_verified"
 ```
 
+마지막으로 http 요청과 응답을 주고 받는, 기존 `login_endpoint` 함수를 리팩토링 합니다.
+
+```python
+from fastapi import FastAPI
+from dataclasses import dataclass
+
+app = FastAPI()
+
+@dataclass
+class LoginRequest:
+    id: str
+    password: str
+        
+        
+@app.post("/login")
+def login_endpoint(req: LoginRequest):
+    # 로그인 로직은 login() 함수에 위임합니다.
+    token = login(user_id=req.id, user_password=req.password)
+    return {
+        "token": token
+    }
+```
+
 이제 모두 구현되었기 때문에 작성한 모든 테스트는 성공합니다.
 
 :::tip
@@ -184,14 +191,13 @@ def create_token(user_id: str) -> str:
     - 테스트할 대상은 아직 구현되지 않았으므로, 테스트는 실패합니다. (실패는 보통 빨간색으로 표현됩니다)
 2. 테스트가 통과되도록 코드를 작성합니다.
     - 구현이 완료되면 테스트는 성공합니다 (성공은 보통 초록색으로 표현됩니다)
-3. 기존 코드를 필요에따라 리팩토링합니다.
-    - 리팩토링은 기존 사용자 입장에서의 동작에 영향을 주면 안됩니다. 다시 말하면, 입/출력은 변하지 않고, 내부적인 동작만 바꾸어야 합니다.
+3. 기존 코드를 필요에 따라 리팩토링합니다.
+    - 리팩토링은 기존 동작에 영향을 주면 안 됩니다. 다시 말하면, 입/출력은 변하지 않고, 내부적인 동작만 바꾸어야 합니다.
     - 리팩토링은 종종 사이드이펙트를 불러오기도 합니다. 
     - 하지만 테스트 코드로 이런 사이드 이펙트를 확인할 수 있습니다. 리팩토링하다가 동작에 문제가 생긴다면, 테스트는 실패할 것입니다.
     - 한편, 리팩토링을 성공적으로 했다면 기존 테스트 역시 성공합니다.
-    - 여기서 기존 테스트 코드는 건드리지 않았다는 게 중요합니다.
 
-이처럼 TDD를 하게되면 실패 -> 성공 -> 리팩토링의 순환을 가지는 "레드-그린-리팩토링" 순서로 개발을 진행하게 됩니다.
+이처럼 TDD를 하게 되면 실패 -> 성공 -> 리팩토링의 순환을 가지는 "레드-그린-리팩토링" 순서로 개발을 진행하게 됩니다.
 
 > ***로버트 마틴의 TDD 3가지 법칙**
 > 
@@ -219,10 +225,10 @@ TDD로 인한 장점은 다음과 같습니다.
 
 TDD로 인한 단점은 다음과 같습니다.
 
-- 테스트 가능하도록 코드를 설계하는 것은 어렵습니다.
-    - TDD를 진행하게 되면 모든 코드들이 테스트 가능하도록 설계해야 합니다.
+- 테스트가 가능하도록 코드를 설계하는 것은 어렵습니다.
+    - TDD를 진행하게 되면 모든 코드들을 테스트 가능하도록 설계해야 합니다.
     - 테스트 가능하도록 코드를 설계하려면, 추상화, 의존성 주입 등을 잘 활용해야 합니다.
-    - 또한 테스트 환경을 제대로 구축하는 것 (Docker compose, DB 데이터 초기화 등) 역시 꽤나 성가신 일입니다.
+    - 또한 테스트 환경을 제대로 구축하는 것 (Docker compose, DB 데이터 초기화 등)의 작업은 꽤나 번거롭습니다.
 - 익숙하지 않은 채 TDD를 진행하면, 개발 프로세스가 느려질 수 있습니다.
     - 위에서 말했듯, 테스트 가능한 코드와 테스트 환경을 만드는 것 자체가 어려운 일입니다.
     - 구현 로직보다 테스트 코드를 작성하고 고민히는데 훨씬 시간이 많이 들 수 있습니다.

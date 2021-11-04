@@ -161,7 +161,6 @@ module.exports = {
             '/5.object-oriented-solid/SOLID - Dependency Inversion.md',
         ]
       },
-
       {
         title: '6. 견고한 서비스를 위한 테스트 코드 작성하기',
         collapsable: false,
@@ -170,6 +169,13 @@ module.exports = {
             '/6.test-code/종류별 테스트 작성하기.md',
             '/6.test-code/의존성을 대체하는 테스트 더블.md',
             '/6.test-code/TDD 기본 개념 익히기.md',
+        ]
+      },
+      {
+        title: '6.1. 프로젝트에 테스트 적용하기',
+        collapsable: false,
+        children: [
+            '/6.1. test적용/개요.md',
         ]
       },
       {
