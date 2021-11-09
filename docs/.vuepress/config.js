@@ -182,12 +182,12 @@ module.exports = {
         title: '7. 더 나은 설계를 위한 아키텍처 이해하기',
         collapsable: false,
         children: [
-            '/7.clean-architecture/아키텍처를 시작하기 전에.md',
-            '/7.clean-architecture/대표적인 아키텍처들 알아보기 - 레이어드 아키텍처.md',
-            '/7.clean-architecture/대표적인 아키텍처들 알아보기 - 포트 앤 어댑터 아키텍처.md',
-            '/7.clean-architecture/클린 아키텍처 - 기본.md',
-            '/7.clean-architecture/클린 아키텍처 - 구현하기.md',
-            '/7.clean-architecture/모놀리스와 마이크로서비스.md',
+            '/7.architecture/아키텍처를 시작하기 전에.md',
+            '/7.architecture/대표적인 아키텍처들 알아보기 - 레이어드 아키텍처.md',
+            '/7.architecture/대표적인 아키텍처들 알아보기 - 헥사고날.md',
+            '/7.architecture/대표적인 아키텍처들 알아보기 - 클린 아키텍처.md',
+            '/7.architecture/클린 아키텍처 - 구현하기.md',
+            '/7.architecture/모놀리스와 마이크로서비스.md',
         ]
       },
     ]
