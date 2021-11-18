@@ -34,7 +34,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       // { text: '🔥 온라인 강의(준비 중)', link: 'https://www.inflearn.com/'},
-      // { text: '블로그', link: 'https://zzsza.github.io'}
+      // { t    ext: '블로그', link: 'https://zzsza.github.io'}
     ],
     sidebarDepth:2,
 
@@ -48,8 +48,37 @@ module.exports = {
             '/1.사전준비/사전 파이썬 공부하기.md',
         ]
       },
+         {
+        title: '2. 협업의 필수 Git, 실무 위주로 익혀보기',
+        collapsable: false,
+        children: [
+            {
+                title: 'Git 기초 돌아보기',
+                collapsable: false,
+                children: [
+                    '/11.git/Git의 기본 - 작업 공간.md',
+                    '/11.git/Git의 기본 - 브랜치.md',
+                ]
+            },
+            {
+                title: '상황별 Git 다루는 법',
+                collapsable: false,
+                children: [
+                    '/11.git/상황별 Git 사용하기 - 1. log&reflog.md',
+                    '/11.git/상황별 Git 사용하기 - 2. reset.md',
+                    '/11.git/상황별 Git 사용하기 - 6. stash.md',
+                    '/11.git/상황별 Git 사용하기 - 3. revert.md',
+                    '/11.git/상황별 Git 사용하기 - 4. rebase-interactive.md',
+                    '/11.git/상황별 Git 사용하기 - 5. merge.md',
+                    '/11.git/상황별 Git 사용하기 - 7. cherrypick.md',
+                ]
+            },
+            '/11.git/실전 Conflict 다루기.md',
+            '/11.git/전략적으로 git 사용하기 - Gitflow.md',
+        ]
+      },
       {
-        title: '2. 깔끔한 코드를 위하여! 클린코드',
+        title: '3. 깔끔한 코드를 위하여! 클린코드',
         collapsable: false,
         children: [
             '/2.clean-code/1. 네이밍.md',
@@ -61,7 +90,7 @@ module.exports = {
         ]
       },
       {
-        title: '3. 코드로 알아보는 객체 지향 프로그래밍',
+        title: '4. 코드로 알아보는 객체 지향 프로그래밍',
         collapsable: false,
         children: [
             '/3.object-oriented/1. 프로그래밍 패러다임 흐름 파악하기 - 절차지향.md',
@@ -73,14 +102,14 @@ module.exports = {
         ]
       },
       {
-        title: '4. (실습) 리팩토링을 통해 객체 지향 알아보기',
+        title: '5. (실습) 리팩토링을 통해 객체 지향 알아보기',
         collapsable: false,
         children: [
             '/4.object-oriented-refactoring/리팩토링전코드.md',
         ]
       },
       {
-        title: '5. 객체 지향 설계를 위한 SOLID 원칙',
+        title: '6. 객체 지향 설계를 위한 SOLID 원칙',
         collapsable: false,
         children: [
             '/5.object-oriented-solid/SOLID - Single Reponsibility.md',
@@ -91,7 +120,7 @@ module.exports = {
         ]
       },
       {
-        title: '6. 견고한 서비스를 위한 테스트 코드 작성하기',
+        title: '7. 견고한 서비스를 위한 테스트 코드 작성하기',
         collapsable: false,
         children: [
             '/6.test-code/테스트 기본 이해하기.md',
@@ -101,14 +130,14 @@ module.exports = {
         ]
       },
       {
-        title: '7. (실습) 프로젝트에 테스트 적용하기',
+        title: '8. (실습) 프로젝트에 테스트 적용하기',
         collapsable: false,
         children: [
             '/7. test적용/개요.md',
         ]
       },
       {
-        title: '8. 더 나은 설계를 위한 아키텍처 이해하기',
+        title: '9. 더 나은 설계를 위한 아키텍처 이해하기',
         collapsable: false,
         children: [
             '/8.architecture/아키텍처를 시작하기 전에.md',
@@ -120,7 +149,7 @@ module.exports = {
         ]
       },
         {
-            title: '9. (실습) 프로젝트에 아키텍처 적용하기',
+            title: '10. (실습) 프로젝트에 아키텍처 적용하기',
             collapsable: false,
             children: [
                 '/9. architecture 적용/개요.md',
@@ -129,7 +158,7 @@ module.exports = {
         },
         {
         type: 'group',
-        title: '10. 회사에서 공부하면 좋을 개발 지식들',
+        title: '11. 회사에서 공부하면 좋을 개발 지식들',
         collapsable: false,
         sidebarDepth: 1,    // optional, defaults to 1
         children: [
@@ -167,35 +196,6 @@ module.exports = {
 				    '/10.basic-knowledge/4.추가/우리 회사는 어떻게 웹 서비스를 운영할까.md',
 				]
             },
-        ]
-      },
-        {
-        title: '11. 협업의 필수 Git, 실무 위주로 익혀보기',
-        collapsable: false,
-        children: [
-            {
-                title: 'Git 기초 돌아보기',
-                collapsable: false,
-                children: [
-                    '/11.git/Git의 기본 - 작업 공간.md',
-                    '/11.git/Git의 기본 - 브랜치.md',
-                ]
-            },
-            {
-                title: '상황별 Git 다루는 법',
-                collapsable: false,
-                children: [
-                    '/11.git/상황별 Git 사용하기 - 1. log&reflog.md',
-                    '/11.git/상황별 Git 사용하기 - 2. reset.md',
-                    '/11.git/상황별 Git 사용하기 - 6. stash.md',
-                    '/11.git/상황별 Git 사용하기 - 3. revert.md',
-                    '/11.git/상황별 Git 사용하기 - 4. rebase-interactive.md',
-                    '/11.git/상황별 Git 사용하기 - 5. merge.md',
-                    '/11.git/상황별 Git 사용하기 - 7. cherrypick.md',
-                ]
-            },
-            '/11.git/실전 Conflict 다루기.md',
-            '/11.git/전략적으로 git 사용하기 - Gitflow.md',
         ]
       },
     ]
