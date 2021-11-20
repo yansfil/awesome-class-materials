@@ -30,11 +30,11 @@ class Company:
     # employee가 다양해질수록 코드를 계속 변경해야 한다.
     def make_work(self):
         for employee in self.employees:
-            if type(employee) == Developer:
+            if isinstance(employee, Developer):
                 employee.coding()
-            elif type(employee) == Designer:
+            elif isinstance(employee, Designer):
                 employee.design()
-            elif type(employee) == Analyst:
+            elif isinstance(employee, Analyst):
                 employee.analyze()
 ```
 

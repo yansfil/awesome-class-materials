@@ -1,4 +1,4 @@
-# SOLID - Single Reponsibility
+# SOLID - Single Responsibility
 
 ## 개념
 

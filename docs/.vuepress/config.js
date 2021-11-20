@@ -112,7 +112,7 @@ module.exports = {
         title: '6. 객체 지향 설계를 위한 SOLID 원칙',
         collapsable: false,
         children: [
-            '/5.object-oriented-solid/SOLID - Single Reponsibility.md',
+            '/5.object-oriented-solid/SOLID - Single Responsibility.md',
             '/5.object-oriented-solid/SOLID - Open Closed.md',
             '/5.object-oriented-solid/SOLID - Liskov Substitution.md',
             '/5.object-oriented-solid/SOLID - Interface Segregation.md',
