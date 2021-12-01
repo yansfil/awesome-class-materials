@@ -1,7 +1,7 @@
 {
   "name": "awesome-dev-class",
   "version": "1.0.0",
-  "description": "초급 개발자의 성장을 위한 핵심 개발 클래스",
+  "description": "모든 개발자의 실무를 위한 필수 기본기 클래스",
   "main": "index.js",
   "author": "Grab",
   "scripts": {

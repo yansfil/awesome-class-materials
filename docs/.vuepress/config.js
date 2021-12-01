@@ -1,10 +1,10 @@
 module.exports = {
-  title: '초급 개발자의 성장을 위한 핵심 개발 클래스 강의자료',
-  description: '초급 개발자의 성장을 위한 핵심 개발 클래스의 강의자료입니다.',
+  title: '모든 개발자의 실무를 위한 필수 기본기 클래스 자료집',
+  description: '모든 개발자의 실무를 위한 필수 기본기 클래스 강의자료 모음집 입니다.',
     base: '/awesome-class-materials/',
   theme: '@vuepress/theme-default',
   head: [
-    ['link', { rel: 'icon', href: 'https://user-images.githubusercontent.com/18207755/125201572-bdb4ea00-e2aa-11eb-9666-281603bea447.png' }],    
+    ['link', { rel: 'icon', href: 'https://freeiconshop.com/wp-content/uploads/edd/code-outline.png' }],
   ],
 
   plugins: {
@@ -30,7 +30,7 @@ module.exports = {
 	},
 
   themeConfig: {
-    logo: 'https://user-images.githubusercontent.com/18207755/125201572-bdb4ea00-e2aa-11eb-9666-281603bea447.png',
+    logo: 'https://freeiconshop.com/wp-content/uploads/edd/code-outline.png',
     nav: [
       { text: 'Home', link: '/' },
       // { text: '🔥 온라인 강의(준비 중)', link: 'https://www.inflearn.com/'},
