@@ -49,7 +49,7 @@ module.exports = {
         ]
       },
          {
-        title: '2. 협업의 필수 Git, 실무 위주로 익혀보기',
+        title: '2. 협업의 필수 Git, 실전에서 자주 사용되는 명령어',
         collapsable: false,
         children: [
             {
@@ -181,7 +181,7 @@ module.exports = {
 				]
             },
             {
-                title: '3. 서비스 구현의 핵심, 회원가입과 로그인 이해하기',
+                title: '3. 서비스의 핵심 요소, 회원가입과 로그인 이해하기',
 				collapsable: false,
 				children: [
 				    '/10.basic-knowledge/3.로그인과 회원가입의 기본/세션과 쿠키.md',
