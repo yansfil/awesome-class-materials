@@ -137,7 +137,7 @@ module.exports = {
         ]
       },
       {
-        title: '9. 더 나은 설계를 위한 아키텍처 이해하기',
+        title: '9. 더 나은 설계를 위해, 소프트웨어 아키텍처 기초와 패턴 이해하기',
         collapsable: false,
         children: [
             '/8.architecture/아키텍처를 시작하기 전에.md',
