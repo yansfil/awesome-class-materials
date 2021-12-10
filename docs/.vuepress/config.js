@@ -8,9 +8,9 @@ module.exports = {
   ],
 
   plugins: {
-    // '@vuepress/google-analytics': {
-	// 		ga: 'UA-110573232-1',
-	// 	},
+    '@vuepress/google-analytics': {
+        ga: 'G-256SMMNXD0',
+    },
     '@vuepress/back-to-top': {},
     '@mr-hope/feed': {},
     '@vuepress/last-updated': {
