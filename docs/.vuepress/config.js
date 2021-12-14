@@ -5,6 +5,15 @@ module.exports = {
   theme: '@vuepress/theme-default',
   head: [
     ['link', { rel: 'icon', href: 'https://freeiconshop.com/wp-content/uploads/edd/code-outline.png' }],
+    [
+	      "script",
+	      {
+	        async: true,
+	        src: "https://www.googletagmanager.com/gtag/js?id=G-256SMMNXD0",
+	      },
+    ],
+    ["script", {}, ["window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-256SMMNXD0');"]],
+
   ],
 
   plugins: {
