@@ -42,8 +42,6 @@ module.exports = {
     logo: 'https://freeiconshop.com/wp-content/uploads/edd/code-outline.png',
     nav: [
       { text: 'Home', link: '/' },
-      // { text: '🔥 온라인 강의(준비 중)', link: 'https://www.inflearn.com/'},
-      // { t    ext: '블로그', link: 'https://zzsza.github.io'}
     ],
     sidebarDepth:2,
 
@@ -55,6 +53,7 @@ module.exports = {
         children: [
             '/1.사전준비/requirement.md',
             '/1.사전준비/사전 파이썬 공부하기.md',
+            '/1.사전준비/파이썬 문법.md'
         ]
       },
          {
